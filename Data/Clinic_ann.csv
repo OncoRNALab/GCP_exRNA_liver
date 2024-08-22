@@ -1,0 +1,821 @@
+prlnkid_ser,prlnkid_pla,Subject_ID,Visit_Type,Visit,Visit_Dt,Sex,Race,Cohort,Etiology,NASH,Fibrosis,HCC,LTXNeed,EndstageLD,Hospital,BPS_fibrosisBrunt,BPS_fibrosisBrunt_F1subdiv,BPS_fibrosisEpos,BPS_fibrosisEpos_F6subdiv,Comment,Cirrhosis,NASH_atrisk_routine,NASH_atrisk_BPS,NASH_Bedossa
+SER00001A,PLA00001A,A010001,Baseline,0,2020-02-28T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F0,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00001G,PLA00001G,G010001,Baseline,0,2020-01-27T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Diabetes mellitus,NASH,F4,Yes,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00001L,PLA00001L,L010156,Baseline,0,2021-02-16T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00002A,PLA00002A,A010002,Baseline,0,2020-03-17T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F2,No,No,No,Antwerp,1,a,1,NA,"Scoring only based on Masson staining, no H&E available",No,Yes,Yes,NAFL
+SER00002G,PLA00002G,G010002,Baseline,0,2020-01-27T00:00:00Z,Female,White,"HCC prognostic marker,Liver transplantation",Other,No NAFLD,F4,No,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00002L,PLA00002L,L010109,Baseline,0,2020-02-11T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00003A,PLA00003A,A010003,Baseline,0,2020-03-24T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F2,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00003G,PLA00003G,G010003,Baseline,0,2020-01-27T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00003L,PLA00003L,L010158,Baseline,0,2021-02-16T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00004A,PLA00004A,A010004,Baseline,0,2020-03-31T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00004G,PLA00004G,G010004,Baseline,0,2020-01-27T00:00:00Z,Male,White,HCC prognostic marker,Diabetes mellitus,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00005A,PLA00005A,A010005,Baseline,0,2020-04-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00005G,PLA00005G,G010005,Baseline,0,2020-01-27T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NA,F4,No,NA,NA,Ghent,3,NA,3,NA,Strong suspicion of alcohol,Yes,NA,NA,NA
+SER00005L,PLA00005L,L010103,Baseline,0,2020-02-04T00:00:00Z,Male,White,NASH biomarker,Obesity (BMI ≥ 30),NASH,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00006A,PLA00006A,A010006,Baseline,0,2020-04-07T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NAFL,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00006G,PLA00006G,G010006,Baseline,0,2020-01-27T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00006L,PLA00006L,L010146,Baseline,0,2020-11-03T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00007A,PLA00007A,A010007,Baseline,0,2020-04-28T00:00:00Z,Female,White,HCC prognostic marker,Mixed,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00007G,PLA00007G,G010007,Baseline,0,2020-01-27T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00007L,PLA00007L,L010126,Baseline,0,2020-09-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00008A,PLA00008A,A010008,Baseline,0,2020-05-18T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,Yes,Yes,Yes,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00008G,PLA00008G,G010008,Baseline,0,2020-01-30T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00008L,PLA00008L,L010112,Baseline,0,2020-02-25T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00009A,PLA00009A,A010009,Baseline,0,2020-05-25T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00009L,PLA00009L,L010115,Baseline,0,2020-03-03T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00010A,PLA00010A,A010010,Baseline,0,2020-05-26T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00010G,PLA00010G,G010010,Baseline,0,2020-01-30T00:00:00Z,Female,White,NASH biomarker,Obesity (BMI ≥ 30),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00010L,PLA00010L,L010172,Baseline,0,2021-03-02T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00011A,PLA00011A,A010011,Baseline,0,2020-05-27T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00011G,PLA00011G,G010011,Baseline,0,2020-02-06T00:00:00Z,Female,White,HCC prognostic marker,Obesity (BMI ≥ 30),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00011L,PLA00011L,L010111,Baseline,0,2020-02-25T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00012A,PLA00012A,A010012,Baseline,0,2020-06-02T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00012G,PLA00012G,G010012,Baseline,0,2020-02-06T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F1,No,No,No,Ghent,1,c,1,NA,NA,No,No,Yes,NASH
+SER00012L,PLA00012L,L010161,Baseline,0,2021-02-23T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00013A,PLA00013A,A010013,Baseline,0,2020-06-03T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00013L,PLA00013L,L010169,Baseline,0,2021-03-02T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00014A,PLA00014A,A010014,Baseline,0,2020-06-08T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00014L,PLA00014L,L010110,Baseline,0,2020-02-25T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00015A,PLA00015A,A010015,Baseline,0,2020-06-09T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Mixed,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00015L,PLA00015L,L010154,Baseline,0,2021-02-16T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00016A,PLA00016A,A010016,Baseline,0,2020-06-12T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00016G,PLA00016G,G010016,Baseline,0,2020-08-18T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00016L,PLA00016L,L010140,Baseline,0,2020-10-06T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00017A,PLA00017A,A010017,Baseline,0,2020-06-16T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,NA,F2,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,NA,NA,NA
+SER00017G,PLA00017G,G010017,Baseline,0,2020-02-06T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00017L,PLA00017L,L010138,Baseline,0,2020-10-06T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00018A,PLA00018A,A010018,Baseline,0,2020-06-18T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00018G,PLA00018G,G010018,Baseline,0,2020-02-11T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00018L,PLA00018L,L010128,Baseline,0,2020-09-22T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00019G,PLA00019G,G010019,Baseline,0,2020-02-11T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F4,No,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00019L,PLA00019L,L010151,Baseline,0,2021-02-16T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NASH,F4,Yes,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00020A,PLA00020A,A010020,Baseline,0,2020-06-19T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Unknown,NASH,F2,No,No,No,Antwerp,2,NA,2,NA,NA,No,Yes,Yes,NASH
+SER00020G,PLA00020G,G010020,Baseline,0,2020-02-13T00:00:00Z,Male,White,NASH biomarker,Obesity (BMI ≥ 30),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00020L,PLA00020L,L010180,Baseline,0,2021-03-09T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis B,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00021G,PLA00021G,G010021,Baseline,0,2020-02-13T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00021L,PLA00021L,L010201,Baseline,0,2021-06-15T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00022A,PLA00022A,A010022,Baseline,0,2020-06-23T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NASH,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00022L,PLA00022L,L010139,Baseline,0,2020-10-06T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00023A,PLA00023A,A010023,Baseline,0,2020-06-24T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00023G,PLA00023G,G010023,Baseline,0,2020-02-13T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F1,No,No,No,Ghent,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00024A,PLA00024A,A010024,Baseline,0,2020-06-30T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00024L,PLA00024L,L010133,Baseline,0,2020-09-29T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00025A,PLA00025A,A010025,Baseline,0,2020-07-07T00:00:00Z,Male,White,NASH biomarker,Unknown,NASH,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00025G,PLA00025G,G010025,Baseline,0,2020-02-13T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00025L,PLA00025L,L010182,Baseline,0,2021-03-09T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00026A,PLA00026A,A010026,Baseline,0,2020-07-07T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NASH,F0,No,No,No,Antwerp,0,NA,0,NA,NA,No,No,No,NAFL
+SER00026G,PLA00026G,G010026,Baseline,0,2020-02-17T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00026L,PLA00026L,L010159,Baseline,0,2021-02-16T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00027A,PLA00027A,A010027,Baseline,0,2020-07-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F0,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00027G,PLA00027G,G010027,Baseline,0,2020-02-17T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00027L,PLA00027L,L010167,Baseline,0,2021-02-23T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00028A,PLA00028A,A010028,Baseline,0,2020-07-28T00:00:00Z,Female,White,NASH biomarker,Unknown,NASH,F1,No,No,No,Antwerp,1,c,1,NA,NA,No,No,Yes,NASH
+SER00028G,PLA00028G,G010028,Baseline,0,2020-02-17T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NAFL,F4,No,No,No,Ghent,4,NA,6,c,Cave alcohol,Yes,No,Yes,NASH
+SER00028L,PLA00028L,L010125,FU,1,2021-03-09T00:00:00Z,Female,Asian,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00029L,PLA00029L,L010152,Baseline,0,2021-02-16T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00030A,PLA00030A,A010030,Baseline,0,2020-08-06T00:00:00Z,Male,White,HCC prognostic marker,Mixed,NA,F4,No,Yes,Yes,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00030G,PLA00030G,G010030,Baseline,0,2020-02-20T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00030L,PLA00030L,L010107,FU,1,2021-02-16T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00031A,PLA00031A,A010031,Baseline,0,2020-08-11T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,NAFL,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00031G,PLA00031G,G010031,Baseline,0,2020-03-02T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00031L,PLA00031L,L010164,Baseline,0,2021-02-23T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00032G,PLA00032G,G010032,Baseline,0,2020-03-03T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00032L,PLA00032L,L010155,Baseline,0,2021-02-16T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00033A,PLA00033A,A010033,Baseline,0,2020-08-19T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NASH,NA,No,No,No,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00033G,PLA00033G,G010033,Baseline,0,2020-03-03T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00033L,PLA00033L,L010137,Baseline,0,2020-10-06T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00034A,PLA00034A,A010034,Baseline,0,2020-08-21T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Unknown,NASH,F4,No,No,No,Antwerp,1,c,1,NA,NA,Yes,Yes,No,NAFL
+SER00034G,PLA00034G,G010034,Baseline,0,2020-03-03T00:00:00Z,Male,White,HCC prognostic marker,Mixed,No NAFLD,F4,No,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00034L,PLA00034L,L010107,Baseline,0,2020-02-11T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00035A,PLA00035A,A010035,Baseline,0,2020-08-25T00:00:00Z,Female,Asian,NASH biomarker,Diabetes mellitus,NAFL,F0,No,No,No,Antwerp,0,NA,0,NA,NA,No,No,No,NAFL
+SER00035G,PLA00035G,G010035,Baseline,0,2022-03-07T00:00:00Z,Female,White,NASH biomarker,Metabolic syndrome,NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00035L,PLA00035L,L010104,Baseline,0,2020-02-04T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00036A,PLA00036A,A010036,Baseline,0,2020-08-25T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00036G,PLA00036G,G010036,Baseline,0,2020-03-09T00:00:00Z,Female,Asian,NASH biomarker,Diabetes mellitus,NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00036L,PLA00036L,L010113,FU,1,2021-03-02T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00037A,PLA00037A,A010037,Baseline,0,2020-08-25T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00037G,PLA00037G,G010037,Baseline,0,2020-03-12T00:00:00Z,Male,Asian,NASH biomarker,Diabetes mellitus,NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00037L,PLA00037L,L010114,Baseline,0,2020-02-25T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),NASH,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00038A,PLA00038A,A010038,Baseline,0,2020-09-22T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NASH,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00038G,PLA00038G,G010038,Baseline,0,2020-03-12T00:00:00Z,Male,White,NASH biomarker,Obesity (BMI ≥ 30),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00038L,PLA00038L,L010135,Baseline,0,2020-09-29T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00039A,PLA00039A,A010039,Baseline,0,2020-09-25T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,Yes,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00039G,PLA00039G,G010039,Baseline,0,2020-03-12T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00039L,PLA00039L,L010157,Baseline,0,2021-02-16T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00040G,PLA00040G,G010040,Baseline,0,2020-03-12T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00040L,PLA00040L,L010122,Baseline,0,2020-09-08T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00041A,PLA00041A,A010041,Baseline,0,2020-09-29T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,Yes,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00041G,PLA00041G,G010041,Baseline,0,2020-03-12T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00041L,PLA00041L,L010163,Baseline,0,2021-02-23T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis B,NAFL,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00042A,PLA00042A,A010042,Baseline,0,2020-10-02T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F1,No,No,No,Antwerp,0,NA,0,NA,NA,No,No,No,NAFL
+SER00042G,PLA00042G,G010042,Baseline,0,2020-03-12T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Primary biliary cholangitis (PBC),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00042L,PLA00042L,L010111,FU,1,2021-02-23T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00043A,PLA00043A,A010043,Baseline,0,2020-10-05T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F0,No,No,No,Antwerp,1,c,1,NA,NA,No,No,No,NAFL
+SER00043G,PLA00043G,G010043,Baseline,0,2020-05-11T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,NAFL,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00043L,PLA00043L,L010102,Baseline,0,2020-02-04T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00044A,PLA00044A,A010044,Baseline,0,2020-10-05T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F0,No,No,No,Antwerp,0,NA,0,NA,NA,No,No,No,NAFL
+SER00044G,PLA00044G,G010044,Baseline,0,2020-05-28T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00044L,PLA00044L,L010145,Baseline,0,2020-10-27T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00045A,PLA00045A,A010045,Baseline,0,2020-10-05T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F3,No,No,No,Antwerp,2,NA,2,NA,NA,No,Yes,Yes,NASH
+SER00045G,PLA00045G,G010045,Baseline,0,2020-05-11T00:00:00Z,Male,White,HCC prognostic marker,Hemochromatosis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00045L,PLA00045L,L010104,FU,1,2021-02-16T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00046G,PLA00046G,G010046,Baseline,0,2020-05-11T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00046L,PLA00046L,L010120,Baseline,0,2020-03-10T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00047A,PLA00047A,A010047,Baseline,0,2020-10-08T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NAFL,F2,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,No,NAFL
+SER00047G,PLA00047G,G010047,Baseline,0,2020-05-12T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F4,Yes,NA,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00047L,PLA00047L,L010142,Baseline,0,2020-10-13T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00048G,PLA00048G,G010048,Baseline,0,2020-05-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00049G,PLA00049G,G010049,Baseline,0,2020-05-14T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00049L,PLA00049L,L010166,Baseline,0,2021-02-23T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00050A,PLA00050A,A010050,Baseline,0,2020-10-12T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NASH,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00050G,PLA00050G,G010050,Baseline,0,2020-11-05T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00050L,PLA00050L,L010130,Baseline,0,2020-09-22T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00051A,PLA00051A,A010051,Baseline,0,2020-10-13T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,NA,No,No,No,Antwerp,NA,NA,NA,NA,NA,NA,No,NA,NA
+SER00051G,PLA00051G,G010051,Baseline,0,2020-05-14T00:00:00Z,Female,White,NASH biomarker,Other,NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00051L,PLA00051L,L010105,Baseline,0,2020-02-04T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00052A,PLA00052A,A010052,Baseline,0,2020-10-15T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,NA,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,NA,NA,NA
+SER00052G,PLA00052G,G010052,Baseline,0,2020-05-14T00:00:00Z,Male,White,NASH biomarker,Unknown,NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00052L,PLA00052L,L010134,Baseline,0,2020-09-29T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00053A,PLA00053A,A010053,Baseline,0,2020-10-16T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NASH,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,No,NAFL
+SER00053G,PLA00053G,G010053,Baseline,0,2020-05-18T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00053L,PLA00053L,L010101,Baseline,0,2020-02-04T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00054G,PLA00054G,G010054,Baseline,0,2020-05-18T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00054L,PLA00054L,L010148,Baseline,0,2020-11-03T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00055A,PLA00055A,A010003,FU,1,2020-10-16T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00055G,PLA00055G,G010055,Baseline,0,2020-05-18T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00055L,PLA00055L,L010116,Baseline,0,2020-03-03T00:00:00Z,Female,White,NASH biomarker,Metabolic syndrome,NASH,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00056A,PLA00056A,A010010,FU,1,2020-10-21T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00056G,PLA00056G,G010056,Baseline,0,2020-05-18T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00056L,PLA00056L,L010146,FU,1,2021-04-13T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00057A,PLA00057A,A010055,Baseline,0,2020-10-23T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F3,No,No,No,Antwerp,3,NA,5,NA,NA,No,Yes,Yes,NASH
+SER00057G,PLA00057G,G010057,Baseline,0,2020-05-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00057L,PLA00057L,L010132,Baseline,0,2020-09-22T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00058A,PLA00058A,A010006,FU,1,2020-10-23T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F2,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00058G,PLA00058G,G010058,Baseline,0,2020-05-18T00:00:00Z,Female,White,"HCC prognostic marker,Liver transplantation",Other,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00058L,PLA00058L,L010162,Baseline,0,2021-02-23T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00059A,PLA00059A,A010056,Baseline,0,2020-10-30T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00059G,PLA00059G,G010059,Baseline,0,2020-05-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00059L,PLA00059L,L010121,Baseline,0,2020-03-10T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00060A,PLA00060A,A010007,FU,1,2020-11-02T00:00:00Z,Female,White,HCC prognostic marker,Mixed,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00060G,PLA00060G,G010060,Baseline,0,2020-05-19T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00060L,PLA00060L,L010112,FU,1,2020-09-15T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00061A,PLA00061A,A010057,Baseline,0,2020-11-10T00:00:00Z,Male,NA,HCC prognostic marker,Mixed,NA,F4,NA,NA,NA,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00061G,PLA00061G,G010061,Baseline,0,2020-06-11T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00061L,PLA00061L,L010129,Baseline,0,2020-09-22T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,NAFL,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00062A,PLA00062A,A010058,Baseline,0,2020-11-10T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,NA,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,NA,NA,NA
+SER00062G,PLA00062G,G010062,Baseline,0,2020-05-25T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00062L,PLA00062L,L010160,Baseline,0,2021-02-16T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00063A,PLA00063A,A010059,Baseline,0,2020-11-19T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,No,NAFL
+SER00063G,PLA00063G,G010063,Baseline,0,2020-05-25T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00063L,PLA00063L,L010153,Baseline,0,2021-02-16T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00064A,PLA00064A,A010060,Baseline,0,2020-11-19T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Unknown,NASH,F4,No,No,No,Antwerp,4,NA,6,c,NA,Yes,Yes,Yes,NASH
+SER00064G,PLA00064G,G010064,Baseline,0,2020-05-25T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F4,Yes,No,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00064L,PLA00064L,L010170,Baseline,0,2021-03-02T00:00:00Z,Male,Asian,HCC prognostic marker,Hepatitis B,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00065A,PLA00065A,A010061,Baseline,0,2020-11-19T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Unknown,NASH,F4,No,No,No,Antwerp,4,NA,6,b,NA,Yes,Yes,No,NAFL
+SER00065G,PLA00065G,G010065,Baseline,0,2020-05-25T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00065L,PLA00065L,L010125,Baseline,0,2020-09-08T00:00:00Z,Female,Asian,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00066A,PLA00066A,A010062,Baseline,0,2020-11-20T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00066G,PLA00066G,G010066,Baseline,0,2020-05-25T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00066L,PLA00066L,L010143,Baseline,0,2020-10-13T00:00:00Z,Male,White,HCC prognostic marker,Other,NAFL,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00067G,PLA00067G,G010067,Baseline,0,2020-05-28T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00067L,PLA00067L,L010165,Baseline,0,2021-02-23T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00068A,PLA00068A,A010064,Baseline,0,2020-11-23T00:00:00Z,Female,White,NASH biomarker,Metabolic syndrome,NASH,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00068G,PLA00068G,G010068,Baseline,0,2020-05-28T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00068L,PLA00068L,L010123,Baseline,0,2020-09-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00069A,PLA00069A,A010009,FU,1,2020-11-23T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00069G,PLA00069G,G010069,Baseline,0,2020-05-28T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00069L,PLA00069L,L010124,Baseline,0,2020-09-08T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00070A,PLA00070A,A010065,Baseline,0,2020-11-30T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00070G,PLA00070G,G010070,Baseline,0,2020-04-06T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00070L,PLA00070L,L010168,Baseline,0,2021-03-02T00:00:00Z,Male,White,HCC prognostic marker,Cardiovascular disease,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00071A,PLA00071A,A010014,FU,1,2020-12-02T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00071G,PLA00071G,G010071,Baseline,0,2020-06-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00071L,PLA00071L,L010126,FU,1,2021-03-16T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00072A,PLA00072A,A010016,FU,1,2020-12-02T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00072G,PLA00072G,G010072,Baseline,0,2020-06-08T00:00:00Z,Female,White,HCC prognostic marker,Diabetes mellitus,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00072L,PLA00072L,L010131,Baseline,0,2020-09-22T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00073A,PLA00073A,A010066,Baseline,0,2020-12-03T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F1,No,No,No,Antwerp,1,c,1,NA,NA,No,No,No,No NAFLD
+SER00073G,PLA00073G,G010073,Baseline,0,2020-06-08T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,Yes,Ghent,4,NA,6,c,NA,Yes,No,Yes,NASH
+SER00073L,PLA00073L,L010113,Baseline,0,2020-02-25T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00074A,PLA00074A,A010067,Baseline,0,2020-12-07T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00074G,PLA00074G,G010074,Baseline,0,2020-06-09T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00074L,PLA00074L,L010149,Baseline,0,2020-11-03T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00075A,PLA00075A,A010012,FU,1,2020-12-07T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00075G,PLA00075G,G010075,Baseline,0,2020-06-09T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00076A,PLA00076A,A010068,Baseline,0,2020-12-08T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F2,No,No,No,Antwerp,2,NA,2,NA,NA,No,Yes,Yes,NAFL
+SER00076G,PLA00076G,G010076,Baseline,0,2020-06-09T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00076L,PLA00076L,L010147,Baseline,0,2020-11-03T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00077A,PLA00077A,A010069,Baseline,0,2020-12-08T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NAFL,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00077G,PLA00077G,G010077,Baseline,0,2020-06-09T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00077L,PLA00077L,L010136,Baseline,0,2020-09-29T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00078A,PLA00078A,A010070,Baseline,0,2020-12-08T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00078G,PLA00078G,G010078,Baseline,0,2020-06-09T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00078L,PLA00078L,L010119,Baseline,0,2020-03-10T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00079A,PLA00079A,A010071,Baseline,0,2020-12-11T00:00:00Z,Female,White,HCC prognostic marker,Metabolic syndrome,NA,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,NA,NA,NA
+SER00079G,PLA00079G,G010079,Baseline,0,2020-06-09T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00079L,PLA00079L,L010150,Baseline,0,2021-02-16T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00080A,PLA00080A,A010072,Baseline,0,2020-12-11T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00080G,PLA00080G,G010080,Baseline,0,2020-06-11T00:00:00Z,Male,White,HCC prognostic marker,Hemochromatosis,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00080L,PLA00080L,L010106,Baseline,0,2020-02-11T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00081A,PLA00081A,A010073,Baseline,0,2020-12-14T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Antwerp,3,NA,3,NA,NA,No,Yes,Yes,NASH
+SER00081G,PLA00081G,G010081,Baseline,0,2020-06-11T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,NA,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00081L,PLA00081L,L010168,FU,1,2021-09-07T00:00:00Z,Male,White,HCC prognostic marker,Cardiovascular disease,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00082A,PLA00082A,A010074,Baseline,0,2020-12-14T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Antwerp,2,NA,2,NA,NA,No,Yes,Yes,NASH
+SER00082L,PLA00082L,L010228,Baseline,0,2021-09-21T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00083A,PLA00083A,A010075,Baseline,0,2020-12-15T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F0,No,No,No,Antwerp,1,c,1,NA,NA,No,No,Yes,NAFL
+SER00083G,PLA00083G,G010083,Baseline,0,2020-06-11T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00083L,PLA00083L,L010231,Baseline,0,2021-09-21T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00084A,PLA00084A,A010013,FU,1,2020-12-16T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00084G,PLA00084G,G010084,Baseline,0,2020-06-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00084L,PLA00084L,L010169,FU,1,2021-09-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00085A,PLA00085A,A010076,Baseline,0,2020-12-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NA,NA,Yes,Yes,Yes,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00085G,PLA00085G,G010085,Baseline,0,2020-06-15T00:00:00Z,Male,White,HCC prognostic marker,Other,NAFL,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00085L,PLA00085L,L010170,FU,1,2021-09-21T00:00:00Z,Male,Asian,HCC prognostic marker,Hepatitis B,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00086A,PLA00086A,A010077,Baseline,0,2021-01-04T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NAFL,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00086G,PLA00086G,G010086,Baseline,0,2020-06-15T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,4,NA,6,b,Cave Alcohol,Yes,No,Yes,NASH
+SER00086L,PLA00086L,L010180,FU,1,2021-09-21T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis B,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00087A,PLA00087A,A010024,FU,1,2021-01-05T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00087G,PLA00087G,G010087,Baseline,0,2020-06-16T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00087L,PLA00087L,L010221,Baseline,0,2021-08-03T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00088G,PLA00088G,G010088,Baseline,0,2020-06-16T00:00:00Z,Male,Asian,HCC prognostic marker,Hepatitis B,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00088L,PLA00088L,L010167,FU,1,2022-03-08T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00089A,PLA00089A,A010079,Baseline,0,2021-01-05T00:00:00Z,Female,Unknown,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00089G,PLA00089G,G010089,Baseline,0,2020-06-18T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00089L,PLA00089L,L010133,FU,1,2021-10-12T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00090A,PLA00090A,A010080,Baseline,0,2021-01-11T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F0,No,No,No,Antwerp,0,NA,0,NA,NA,No,No,No,NAFL
+SER00090L,PLA00090L,L010140,FU,1,2021-10-12T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00091G,PLA00091G,G010091,Baseline,0,2020-06-18T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00092A,PLA00092A,A010083,Baseline,0,2020-01-15T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NAFL,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00092G,PLA00092G,G010092,Baseline,0,2020-06-18T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00093A,PLA00093A,A010084,Baseline,0,2021-01-19T00:00:00Z,Male,White,HCC prognostic marker,Obesity (BMI ≥ 30),NASH,F4,No,No,No,Antwerp,4,NA,6,c,NA,Yes,Yes,No,No NAFLD
+SER00093G,PLA00093G,G010093,Baseline,0,2020-06-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00093L,PLA00093L,L010181,FU,1,2021-09-07T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00094A,PLA00094A,A010085,Baseline,0,2021-01-19T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00094G,PLA00094G,G010094,Baseline,0,2020-06-18T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00094L,PLA00094L,L010219,Baseline,0,2021-08-03T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Hepatitis C,NASH,F4,No,NA,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00095G,PLA00095G,G010095,Baseline,0,2020-06-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00095L,PLA00095L,L010222,Baseline,0,2021-09-07T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00096A,PLA00096A,A010087,Baseline,0,2021-01-22T00:00:00Z,Female,White,NASH biomarker,Obesity (BMI ≥ 30),NASH,F2,No,No,No,Antwerp,3,NA,3,NA,NA,No,Yes,Yes,NASH
+SER00096G,PLA00096G,G010096,Baseline,0,2020-06-22T00:00:00Z,Female,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00096L,PLA00096L,L010227,Baseline,0,2021-09-21T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NAFL,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00097A,PLA00097A,A010088,Baseline,0,2021-01-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00097G,PLA00097G,G010097,Baseline,0,2020-06-23T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Primary biliary cholangitis (PBC),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00097L,PLA00097L,L010172,FU,1,2021-09-14T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00098A,PLA00098A,A010089,Baseline,0,2021-02-05T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00098G,PLA00098G,G010098,Baseline,0,2020-06-23T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00098L,PLA00098L,L010241,Baseline,0,2022-03-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00099A,PLA00099A,A010030,FU,1,2021-01-28T00:00:00Z,Male,White,HCC prognostic marker,Mixed,NA,F4,No,Yes,Yes,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00099G,PLA00099G,G010099,Baseline,0,2020-06-25T00:00:00Z,Female,White,NASH biomarker,Autoimmune hepatitis,NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00099L,PLA00099L,L010223,Baseline,0,2021-09-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,Yes,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00100G,PLA00100G,G010100,Baseline,0,2020-06-25T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00100L,PLA00100L,L010217,Baseline,0,2021-08-03T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00101G,PLA00101G,G010101,Baseline,0,2020-02-13T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00101L,PLA00101L,L010122,FU,2,2021-09-28T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00102G,PLA00102G,G010102,Baseline,0,2020-06-11T00:00:00Z,Male,White,NASH biomarker,Unknown,NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00102L,PLA00102L,L010225,FU,1,2022-03-15T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Other,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00103G,PLA00103G,G010103,Baseline,0,2020-06-25T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00103L,PLA00103L,L010152,FU,1,2022-03-01T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00104G,PLA00104G,G010104,Baseline,0,2021-02-04T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00104L,PLA00104L,L010218,Baseline,0,2021-08-03T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00105A,PLA00105A,A010010,FU,2,2021-04-19T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00105G,PLA00105G,G010105,Baseline,0,2020-06-25T00:00:00Z,Male,White,NASH biomarker,Hemochromatosis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00105L,PLA00105L,L010206,FU,1,2021-10-12T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00106A,PLA00106A,A010037,FU,1,2021-04-21T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00106G,PLA00106G,G010106,Baseline,0,2020-06-29T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00106L,PLA00106L,L010162,FU,1,2021-09-07T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00107A,PLA00107A,A010031,FU,1,2021-04-29T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,NAFL,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00107G,PLA00107G,G010107,Baseline,0,2020-06-29T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00107L,PLA00107L,L010212,Baseline,0,2021-06-29T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00108L,PLA00108L,L010125,FU,2,2021-09-14T00:00:00Z,Female,Asian,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00109A,PLA00109A,A010007,FU,2,2021-04-27T00:00:00Z,Female,White,HCC prognostic marker,Mixed,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00109G,PLA00109G,G010109,Baseline,0,2020-06-30T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,NA,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00109L,PLA00109L,L010127,FU,2,2021-09-28T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00110A,PLA00110A,A010062,FU,1,2021-04-28T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00110G,PLA00110G,G010110,Baseline,0,2020-06-29T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00110L,PLA00110L,L010115,FU,1,2022-02-15T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00111A,PLA00111A,A010023,FU,1,2021-05-04T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00111G,PLA00111G,G010111,Baseline,0,2020-06-29T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00111L,PLA00111L,L010243,Baseline,0,2022-03-01T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00112A,PLA00112A,A010095,Baseline,0,2021-05-28T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F0,No,No,No,Antwerp,1,a,1,NA,NA,No,No,No,NAFL
+SER00112G,PLA00112G,G010112,Baseline,0,2020-06-30T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00112L,PLA00112L,L010233,Baseline,0,2021-09-28T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00113A,PLA00113A,A010096,Baseline,0,2021-05-28T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00113G,PLA00113G,G010113,Baseline,0,2020-07-06T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,3,NA,3,NA,NA,Yes,No,Yes,NASH
+SER00113L,PLA00113L,L010128,FU,1,2021-10-05T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00114A,PLA00114A,A010065,FU,1,2021-06-02T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00114G,PLA00114G,G010114,Baseline,0,2020-07-06T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00114L,PLA00114L,L010112,FU,3,2021-09-28T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00115A,PLA00115A,A010013,FU,2,2021-06-04T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00115G,PLA00115G,G010115,Baseline,0,2020-07-06T00:00:00Z,Female,White,HCC prognostic marker,Diabetes mellitus,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00115L,PLA00115L,L010240,Baseline,0,2022-02-01T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00116A,PLA00116A,A010092,FU,1,2021-09-01T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NA,NA,NA,NA,NA,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00116G,PLA00116G,G010116,Baseline,0,2020-07-06T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00116L,PLA00116L,L010230,Baseline,0,2021-09-21T00:00:00Z,Female,NA,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,NA,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00117A,PLA00117A,A010030,FU,2,2021-09-09T00:00:00Z,Male,White,HCC prognostic marker,Mixed,NA,F4,No,Yes,Yes,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00117G,PLA00117G,G010117,Baseline,0,2020-07-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00117L,PLA00117L,L010226,Baseline,0,2021-09-21T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00118A,PLA00118A,A010084,FU,1,2021-09-10T00:00:00Z,Male,White,HCC prognostic marker,Obesity (BMI ≥ 30),NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00118G,PLA00118G,G010118,Baseline,0,2020-07-07T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00118L,PLA00118L,L010169,FU,2,2022-03-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00119A,PLA00119A,A010014,FU,2,2021-09-21T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00119G,PLA00119G,G010119,Baseline,0,2020-07-07T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00119L,PLA00119L,L010146,FU,2,2022-04-19T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00120G,PLA00120G,G010120,Baseline,0,2020-07-09T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00121A,PLA00121A,A010098,Baseline,0,2021-09-24T00:00:00Z,Female,White,NASH biomarker,Metabolic syndrome,NASH,F2,No,No,No,Antwerp,2,NA,2,NA,NA,No,Yes,Yes,NASH
+SER00121G,PLA00121G,G010121,Baseline,0,2020-07-09T00:00:00Z,Male,White,NASH biomarker,Obesity (BMI ≥ 30),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,Fibrosis cannot be scored,No,No,NA,NASH
+SER00121L,PLA00121L,L010193,Baseline,0,2021-05-25T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00122A,PLA00122A,A010099,Baseline,0,2021-09-27T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F0,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,Yes,NASH
+SER00122G,PLA00122G,G010122,Baseline,0,2020-07-13T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00122L,PLA00122L,L010139,FU,1,2021-04-13T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00123A,PLA00123A,A010100,Baseline,0,2021-09-27T00:00:00Z,Female,White,NASH biomarker,Obesity (BMI ≥ 30),NASH,F2,No,No,No,Antwerp,2,NA,2,NA,NA,No,Yes,Yes,NASH
+SER00123G,PLA00123G,G010123,Baseline,0,2020-07-13T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00123L,PLA00123L,L010186,FU,1,2021-07-13T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00124A,PLA00124A,A010007,FU,3,2021-09-28T00:00:00Z,Female,White,HCC prognostic marker,Mixed,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00124G,PLA00124G,G010124,Baseline,0,2020-07-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00124L,PLA00124L,L010188,Baseline,0,2021-05-11T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00125A,PLA00125A,A010101,Baseline,0,2021-11-10T00:00:00Z,Female,White,NASH biomarker,Unknown,NAFL,F0,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00125G,PLA00125G,G010125,Baseline,0,2020-07-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00125L,PLA00125L,L010187,Baseline,0,2021-05-11T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00126A,PLA00126A,A010015,FU,1,2021-10-11T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Mixed,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00126G,PLA00126G,G010126,Baseline,0,2020-08-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00126L,PLA00126L,L010202,Baseline,0,2021-06-15T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00127A,PLA00127A,A010102,Baseline,0,2021-10-22T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00127G,PLA00127G,G010127,Baseline,0,2020-08-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00127L,PLA00127L,L010220,Baseline,0,2021-08-03T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00128A,PLA00128A,A010044,FU,1,2021-10-25T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F0,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00128L,PLA00128L,L010102,FU,1,2021-06-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00129A,PLA00129A,A010010,FU,3,2021-10-27T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00129G,PLA00129G,G010129,Baseline,0,2020-08-10T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00129L,PLA00129L,L010132,FU,1,2021-03-23T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00130A,PLA00130A,A010093,FU,1,2021-11-02T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NASH,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00130G,PLA00130G,G010130,Baseline,0,2020-08-10T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,4,NA,6,c,NA,Yes,No,Yes,NAFL
+SER00130L,PLA00130L,L010224,Baseline,0,2021-09-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00131A,PLA00131A,A010052,FU,1,2021-11-03T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,NA,NA,No,No,No,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00131G,PLA00131G,G010131,Baseline,0,2020-08-10T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00131L,PLA00131L,L010183,Baseline,0,2021-05-04T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00132A,PLA00132A,A010008,FU,1,2021-11-09T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NA,NA,NA,NA,NA,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00132L,PLA00132L,L010213,Baseline,0,2021-06-29T00:00:00Z,Female,White,HCC prognostic marker,Metabolic syndrome,NAFL,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00133A,PLA00133A,A010050,FU,1,2021-11-09T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NA,NA,NA,NA,NA,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00133G,PLA00133G,G010133,Baseline,0,2020-08-11T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F4,Yes,NA,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00133L,PLA00133L,L010216,Baseline,0,2021-07-13T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00134A,PLA00134A,A010085,FU,1,2021-11-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00134G,PLA00134G,G010134,Baseline,0,2020-08-13T00:00:00Z,Male,White,HCC prognostic marker,Diabetes mellitus,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00134L,PLA00134L,L010182,FU,1,2021-09-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00135A,PLA00135A,A010009,FU,2,2021-11-16T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00135G,PLA00135G,G010135,Baseline,0,2020-08-13T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00135L,PLA00135L,L010215,Baseline,0,2021-07-13T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00136A,PLA00136A,A010062,FU,2,2021-11-24T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00136G,PLA00136G,G010136,Baseline,0,2020-08-17T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F4,Yes,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00136L,PLA00136L,L010198,Baseline,0,2021-06-08T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00137A,PLA00137A,A010006,FU,2,2021-11-26T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F0,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00137G,PLA00137G,G010137,Baseline,0,2020-08-17T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00137L,PLA00137L,L010191,Baseline,0,2021-05-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00138A,PLA00138A,A010033,FU,1,2021-11-30T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00138G,PLA00138G,G010138,Baseline,0,2020-08-17T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,4,NA,6,b,NA,Yes,No,Yes,NASH
+SER00138L,PLA00138L,L010203,Baseline,0,2021-06-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00139A,PLA00139A,A010013,FU,3,2021-12-03T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00139G,PLA00139G,G010139,Baseline,0,2020-08-17T00:00:00Z,Female,Asian,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00139L,PLA00139L,L010229,Baseline,0,2021-09-21T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00140G,PLA00140G,G010140,Baseline,0,2020-08-17T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00140L,PLA00140L,L010204,Baseline,0,2021-06-15T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NAFL,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00141A,PLA00141A,A010016,FU,2,2021-12-07T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00141G,PLA00141G,G010141,Baseline,0,2020-08-18T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00141L,PLA00141L,L010185,Baseline,0,2021-05-11T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00142A,PLA00142A,A010037,FU,2,2021-12-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00142G,PLA00142G,G010142,Baseline,0,2020-08-20T00:00:00Z,Female,White,NASH biomarker,Metabolic syndrome,NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00142L,PLA00142L,L010179,Baseline,0,2021-05-04T00:00:00Z,Male,Asian,HCC prognostic marker,Hepatitis B,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00143A,PLA00143A,A010071,FU,1,2021-12-08T00:00:00Z,Female,White,HCC prognostic marker,Metabolic syndrome,NA,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,NA,NA,NA
+SER00143G,PLA00143G,G010143,Baseline,0,2020-08-20T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NASH,F2,No,No,No,Ghent,3,NA,3,NA,NA,No,Yes,Yes,NASH
+SER00143L,PLA00143L,L010149,FU,1,2021-05-10T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00144A,PLA00144A,A010061,FU,1,2021-12-10T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Unknown,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00144G,PLA00144G,G010144,Baseline,0,2020-08-20T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00144L,PLA00144L,L010165,FU,1,2021-05-25T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,No NAFLD,F4,No,NA,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00145A,PLA00145A,A010070,FU,1,2021-12-21T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00145G,PLA00145G,G010145,Baseline,0,2020-08-20T00:00:00Z,Female,Other,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00145L,PLA00145L,L010186,Baseline,0,2021-05-11T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00146A,PLA00146A,A010003,FU,2,2021-12-22T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00146G,PLA00146G,G010146,Baseline,0,2020-08-31T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00146L,PLA00146L,L010157,FU,1,2022-02-22T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00147A,PLA00147A,A010024,FU,2,2021-12-28T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00147G,PLA00147G,G010147,Baseline,0,2020-08-31T00:00:00Z,Male,Other,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,4,NA,6,c,Biopsy with holes,Yes,No,Yes,NASH
+SER00147L,PLA00147L,L010131,FU,1,2021-03-23T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00148A,PLA00148A,A010074,FU,1,2022-01-05T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00148G,PLA00148G,G010148,Baseline,0,2020-08-31T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00148L,PLA00148L,L010206,Baseline,0,2021-06-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00149A,PLA00149A,A010031,FU,2,2022-01-20T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,NA,NA,No,No,No,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00149L,PLA00149L,L010113,FU,2,2022-03-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00150A,PLA00150A,A010038,FU,1,2022-01-24T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F1,No,No,No,Antwerp,2,NA,2,NA,NA,No,No,No,NAFL
+SER00150G,PLA00150G,G010150,Baseline,0,2020-09-01T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,NAFL,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00150L,PLA00150L,L010207,Baseline,0,2021-06-22T00:00:00Z,Male,Asian,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00151A,PLA00151A,A010075,FU,1,2022-01-24T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NASH,F0,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00151G,PLA00151G,G010151,Baseline,0,2020-09-03T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00151L,PLA00151L,L010178,Baseline,0,2021-05-04T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00152A,PLA00152A,A010058,FU,1,2022-01-31T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,NA,F3,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,NA,NA,NA
+SER00152G,PLA00152G,G010152,Baseline,0,2020-09-03T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00152L,PLA00152L,L010199,Baseline,0,2021-06-08T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00153A,PLA00153A,A010079,FU,1,2022-02-08T00:00:00Z,Female,Unknown,HCC prognostic marker,Substance use,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00153G,PLA00153G,G010153,Baseline,0,2020-09-03T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00153L,PLA00153L,L010173,Baseline,0,2021-04-27T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00154A,PLA00154A,A010043,FU,1,2022-03-01T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NAFL,F2,No,No,No,Antwerp,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00154G,PLA00154G,G010154,Baseline,0,2020-09-03T00:00:00Z,Male,White,NASH biomarker,Obesity (BMI ≥ 30),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00154L,PLA00154L,L010184,Baseline,0,2021-05-04T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00155A,PLA00155A,A010092,FU,2,2022-03-10T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NA,NA,NA,NA,NA,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00155G,PLA00155G,G010155,Baseline,0,2020-09-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00155L,PLA00155L,L010194,Baseline,0,2021-06-01T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00156A,PLA00156A,A010033,FU,2,2022-03-15T00:00:00Z,Male,White,HCC prognostic marker,Unknown,NASH,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00156G,PLA00156G,G010156,Baseline,0,2020-09-08T00:00:00Z,Female,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00156L,PLA00156L,L010190,Baseline,0,2021-05-18T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis B,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00157A,PLA00157A,A010014,FU,3,2022-03-15T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00157G,PLA00157G,G010157,Baseline,0,2020-09-10T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,NA,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00157L,PLA00157L,L010210,Baseline,0,2021-06-22T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00158A,PLA00158A,A010062,FU,3,2022-03-24T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,NA,F4,No,No,No,Antwerp,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00158G,PLA00158G,G010158,Baseline,0,2020-09-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00158L,PLA00158L,L010225,Baseline,0,2021-09-14T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Other,NAFL,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00159A,PLA00159A,A010052,FU,2,2022-04-05T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,NA,NA,No,No,No,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00159G,PLA00159G,G010159,Baseline,0,2020-09-10T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F3,No,No,No,Ghent,3,NA,4,NA,NA,No,No,Yes,NASH
+SER00159L,PLA00159L,L010208,Baseline,0,2021-06-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00160A,PLA00160A,A010008,FU,2,2022-06-05T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NA,NA,NA,NA,NA,Antwerp,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00160G,PLA00160G,G010160,Baseline,0,2020-09-21T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00161G,PLA00161G,G010161,Baseline,0,2020-09-21T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00161L,PLA00161L,L010174,Baseline,0,2021-04-27T00:00:00Z,Male,White,NASH biomarker,Metabolic syndrome,NAFL,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00162G,PLA00162G,G010162,Baseline,0,2020-09-24T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00162L,PLA00162L,L010197,Baseline,0,2021-06-08T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00163G,PLA00163G,G010163,Baseline,0,2020-09-28T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00163L,PLA00163L,L010112,FU,2,2021-03-16T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00164G,PLA00164G,G010164,Baseline,0,2020-09-28T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00164L,PLA00164L,L010192,Baseline,0,2021-05-18T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00165G,PLA00165G,G010165,Baseline,0,2020-09-28T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00165L,PLA00165L,L010176,Baseline,0,2021-04-27T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00166G,PLA00166G,G010166,Baseline,0,2020-09-29T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00166L,PLA00166L,L010196,Baseline,0,2021-06-01T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00167G,PLA00167G,G010167,Baseline,0,2020-09-29T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NAFL,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00167L,PLA00167L,L010122,FU,1,2021-03-16T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00168G,PLA00168G,G010168,Baseline,0,2020-09-29T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00168L,PLA00168L,L010181,Baseline,0,2021-03-09T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00169G,PLA00169G,G010169,Baseline,0,2020-09-29T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00169L,PLA00169L,L010101,FU,1,2021-06-01T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00170G,PLA00170G,G010170,Baseline,0,2020-10-01T00:00:00Z,Female,White,NASH biomarker,Unknown,NA,NA,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00170L,PLA00170L,L010200,Baseline,0,2021-06-08T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00171G,PLA00171G,G010171,Baseline,0,2020-10-12T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00171L,PLA00171L,L010195,Baseline,0,2021-06-01T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00172G,PLA00172G,G010172,Baseline,0,2020-10-12T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00172L,PLA00172L,L010175,Baseline,0,2021-04-27T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00173G,PLA00173G,G010173,Baseline,0,2020-10-12T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00173L,PLA00173L,L010189,Baseline,0,2021-05-11T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00174G,PLA00174G,G010174,Baseline,0,2020-10-12T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00174L,PLA00174L,L010211,Baseline,0,2021-06-29T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00175G,PLA00175G,G010175,Baseline,0,2020-10-12T00:00:00Z,Male,White,HCC prognostic marker,Other,NASH,F4,Yes,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00175L,PLA00175L,L010209,Baseline,0,2021-06-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00176G,PLA00176G,G010176,Baseline,0,2020-10-15T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00176L,PLA00176L,L010177,Baseline,0,2021-04-27T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00177G,PLA00177G,G010177,Baseline,0,2020-10-15T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,1,c,2,NA,NA,No,Yes,Yes,NAFL
+SER00177L,PLA00177L,L010120,FU,1,2021-05-04T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00178G,PLA00178G,G010178,Baseline,0,2020-10-15T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,4,NA,6,a,NA,No,Yes,Yes,NASH
+SER00178L,PLA00178L,L010214,Baseline,0,2021-07-13T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00179G,PLA00179G,G010179,Baseline,0,2020-10-26T00:00:00Z,Female,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00179L,PLA00179L,L010123,FU,1,2021-03-16T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00180G,PLA00180G,G010180,Baseline,0,2020-10-27T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00180L,PLA00180L,L010205,Baseline,0,2021-06-15T00:00:00Z,Male,Asian,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00181G,PLA00181G,G010181,Baseline,0,2020-10-27T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00181L,PLA00181L,L010135,FU,1,2021-09-28T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00182G,PLA00182G,G010041,FU,1,2020-10-27T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00182L,PLA00182L,L010232,Baseline,0,2021-09-28T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00183G,PLA00183G,G010132,FU,1,2020-10-27T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Mixed,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00183L,PLA00183L,L010213,FU,1,2022-01-18T00:00:00Z,Female,White,HCC prognostic marker,Metabolic syndrome,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00184G,PLA00184G,G010184,Baseline,0,2021-08-23T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00184L,PLA00184L,L010182,FU,2,2022-03-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00185G,PLA00185G,G010185,Baseline,0,2020-10-29T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00185L,PLA00185L,L010239,Baseline,0,2022-02-01T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00186G,PLA00186G,G010186,Baseline,0,2020-11-03T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NASH,F2,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00186L,PLA00186L,L010215,FU,1,2022-01-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00187G,PLA00187G,G010187,Baseline,0,2020-11-05T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00188G,PLA00188G,G010045,FU,1,2020-11-03T00:00:00Z,Male,White,HCC prognostic marker,Hemochromatosis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00188L,PLA00188L,L010242,Baseline,0,2022-03-01T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00189G,PLA00189G,G010189,Baseline,0,2020-11-03T00:00:00Z,Female,White,HCC prognostic marker,Unknown,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00189L,PLA00189L,L010244,Baseline,0,2022-03-01T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00190G,PLA00190G,G010062,FU,1,2020-11-12T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00190L,PLA00190L,L010247,Baseline,0,2022-04-19T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00191G,PLA00191G,G010057,FU,1,2020-11-16T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00191L,PLA00191L,L010246,Baseline,0,2022-03-29T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00192G,PLA00192G,G010111,FU,1,2020-11-16T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,NA,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00192L,PLA00192L,L010159,FU,1,2022-02-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00193G,PLA00193G,G010193,Baseline,0,2020-11-12T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00193L,PLA00193L,L010109,FU,1,2022-02-22T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00194G,PLA00194G,G010043,FU,1,2020-11-16T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00195G,PLA00195G,G010053,FU,1,2020-11-16T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00195L,PLA00195L,L010153,FU,1,2022-02-15T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00196G,PLA00196G,G010196,Baseline,0,2020-11-16T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00196L,PLA00196L,L010236,Baseline,0,2022-01-25T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00197G,PLA00197G,G010197,Baseline,0,2020-11-17T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00198G,PLA00198G,G010198,Baseline,0,2020-11-23T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00198L,PLA00198L,L010222,FU,1,2022-03-15T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00199G,PLA00199G,G010199,Baseline,0,2020-11-23T00:00:00Z,Female,White,HCC prognostic marker,Unknown,NASH,F4,No,NA,Yes,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00199L,PLA00199L,L010172,FU,2,2022-03-15T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00200G,PLA00200G,G010054,FU,1,2020-11-23T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00200L,PLA00200L,L010234,Baseline,0,2022-01-25T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00201G,PLA00201G,G010055,FU,1,2020-11-23T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00201L,PLA00201L,L010112,FU,4,2022-04-05T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00202G,PLA00202G,G010067,FU,1,2020-11-26T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00202L,PLA00202L,L010238,Baseline,0,2022-02-01T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00203G,PLA00203G,G010203,Baseline,0,2020-11-30T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,Yes,No,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00203L,PLA00203L,L010237,Baseline,0,2022-01-25T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00204G,PLA00204G,G010204,Baseline,0,2020-11-30T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00204L,PLA00204L,L010136,FU,1,2021-10-19T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00205G,PLA00205G,G010069,FU,1,2020-12-07T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00205L,PLA00205L,L010130,FU,2,2021-10-05T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00206G,PLA00206G,G010206,Baseline,0,2020-12-07T00:00:00Z,Male,Black or African American,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00206L,PLA00206L,L010137,FU,1,2022-03-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00207L,PLA00207L,L010216,FU,1,2022-01-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00208G,PLA00208G,G010090,FU,1,2020-12-10T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00208L,PLA00208L,L010134,FU,1,2021-10-05T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00209G,PLA00209G,G010080,FU,1,2020-12-10T00:00:00Z,Male,White,HCC prognostic marker,Hemochromatosis,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00209L,PLA00209L,L010235,Baseline,0,2022-01-25T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00210G,PLA00210G,G010210,Baseline,0,2020-12-10T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00210L,PLA00210L,L010232,FU,1,2022-03-29T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00211G,PLA00211G,G010211,Baseline,0,2020-12-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00211L,PLA00211L,L010141,FU,1,2021-10-19T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00212G,PLA00212G,G010112,FU,1,2020-12-10T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00212L,PLA00212L,L010148,FU,1,2022-03-08T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00213G,PLA00213G,G010098,FU,1,2020-12-15T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00213L,PLA00213L,L010194,FU,1,2022-01-18T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00214G,PLA00214G,G010141,FU,1,2020-12-15T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00215G,PLA00215G,G010089,FU,1,2020-12-17T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00216G,PLA00216G,G010216,Baseline,0,2020-12-17T00:00:00Z,Female,NA,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,0,NA,0,NA,NA,No,Yes,No,No NAFLD
+SER00217G,PLA00217G,G010094,FU,1,2020-12-17T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00218G,PLA00218G,G010092,FU,1,2020-12-17T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00219G,PLA00219G,G010138,FU,1,2020-12-17T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00220G,PLA00220G,G010220,Baseline,0,2020-12-17T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Ghent,4,NA,6,a,NA,Yes,Yes,Yes,NASH
+SER00221G,PLA00221G,G010221,Baseline,0,2021-01-05T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,NA,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00222G,PLA00222G,G010060,FU,1,2021-01-05T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00223G,PLA00223G,G010223,Baseline,0,2021-01-07T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00224G,PLA00224G,G010095,FU,1,2021-01-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00225G,PLA00225G,G010225,Baseline,0,2021-01-07T00:00:00Z,Female,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00226G,PLA00226G,G010226,Baseline,0,2021-01-07T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00227G,PLA00227G,G010125,FU,1,2021-01-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00229G,PLA00229G,G010229,Baseline,0,2021-01-07T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NAFL,F4,No,No,No,Ghent,1,c,1,NA,NA,Yes,No,Yes,NAFL
+SER00231G,PLA00231G,G010163,FU,1,2021-01-12T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NA,NA,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00232G,PLA00232G,G010117,FU,1,2021-01-12T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,NA,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00233G,PLA00233G,G010011,FU,1,2021-04-19T00:00:00Z,Female,White,HCC prognostic marker,Obesity (BMI ≥ 30),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00234G,PLA00234G,G010079,FU,1,2021-01-14T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00236G,PLA00236G,G010236,Baseline,0,2021-01-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00237G,PLA00237G,G010237,Baseline,0,2021-01-14T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00237L,PLA00237L,L010108,FU,1,2022-02-15T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00238G,PLA00238G,G010238,Baseline,0,2021-01-14T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00239G,PLA00239G,G010239,Baseline,0,2021-01-19T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00240G,PLA00240G,G010240,Baseline,0,2021-01-25T00:00:00Z,Male,NA,HCC prognostic marker,Hemochromatosis,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00241G,PLA00241G,G010241,Baseline,0,2021-01-25T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00242G,PLA00242G,G010242,Baseline,0,2021-01-25T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00242L,PLA00242L,L010121,FU,1,2022-04-19T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00243G,PLA00243G,G010243,Baseline,0,2021-01-26T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00244G,PLA00244G,G010244,Baseline,0,2021-01-26T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00244L,PLA00244L,L010249,Baseline,0,2022-04-26T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F3,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00245G,PLA00245G,G010245,Baseline,0,2021-01-28T00:00:00Z,Female,White,NASH biomarker,Diabetes mellitus,NAFL,F0,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00245L,PLA00245L,L010101,FU,2,2022-04-19T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00246G,PLA00246G,G010103,FU,1,2021-01-28T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00247G,PLA00247G,G010247,Baseline,0,2021-02-02T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker,Liver transplantation",Diabetes mellitus,NASH,F4,No,Yes,NA,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00248G,PLA00248G,G010018,FU,1,2021-02-09T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00249G,PLA00249G,G010063,FU,1,2021-02-11T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00251G,PLA00251G,G010120,FU,1,2021-02-04T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00252G,PLA00252G,G010252,Baseline,0,2021-02-11T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F2,No,No,No,Ghent,2,NA,2,NA,NA,No,Yes,Yes,NASH
+SER00253G,PLA00253G,G010253,Baseline,0,2021-02-11T00:00:00Z,Male,White,HCC prognostic marker,Other,NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00254G,PLA00254G,G010021,FU,1,2021-02-11T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00255G,PLA00255G,G010255,Baseline,0,2021-02-11T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00255L,PLA00255L,L010248,Baseline,0,2022-04-26T00:00:00Z,Male,White,HCC prognostic marker,Hemochromatosis,No NAFLD,F4,No,No,No,Leuven,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00256G,PLA00256G,G010256,Baseline,0,2021-02-23T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00257G,PLA00257G,G010257,Baseline,0,2021-02-23T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00258G,PLA00258G,G010144,FU,1,2021-02-25T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00259G,PLA00259G,G010065,FU,1,2021-02-25T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00260G,PLA00260G,G010097,FU,1,2021-02-25T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Primary biliary cholangitis (PBC),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00261G,PLA00261G,G010261,Baseline,0,2021-03-01T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00262G,PLA00262G,G010158,FU,1,2021-03-09T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00263G,PLA00263G,G010136,FU,1,2021-03-01T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00264G,PLA00264G,G010153,FU,1,2021-03-02T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00265G,PLA00265G,G010030,FU,1,2021-03-04T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00266G,PLA00266G,G010129,FU,1,2021-03-08T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00267G,PLA00267G,G010267,Baseline,0,2021-03-11T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F1,No,No,No,Ghent,2,NA,2,NA,NA,No,No,No,NAFL
+SER00268G,PLA00268G,G010174,FU,1,2021-03-09T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00269G,PLA00269G,G010269,Baseline,0,2021-03-09T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00270G,PLA00270G,G010040,FU,1,2021-03-11T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00271G,PLA00271G,G010139,FU,1,2021-03-15T00:00:00Z,Female,Asian,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00272G,PLA00272G,G010159,FU,1,2021-03-15T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00272L,PLA00272L,L010245,Baseline,0,2022-03-22T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F2,No,No,No,Leuven,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00273G,PLA00273G,G010033,FU,1,2021-03-16T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Substance use,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00274G,PLA00274G,G010084,FU,1,2021-03-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00275G,PLA00275G,G010107,FU,1,2021-03-23T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00276G,PLA00276G,G010138,FU,2,2021-03-23T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00277G,PLA00277G,G010135,FU,1,2021-03-23T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00278G,PLA00278G,G010039,FU,1,2021-03-25T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00279G,PLA00279G,G010279,Baseline,0,2021-03-25T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00280G,PLA00280G,G010280,Baseline,0,2021-03-30T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00281G,PLA00281G,G010281,Baseline,0,2021-03-30T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00282G,PLA00282G,G010012,FU,1,2021-04-01T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00283G,PLA00283G,G010162,FU,1,2021-04-01T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00284G,PLA00284G,G010284,Baseline,0,2021-04-06T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00285G,PLA00285G,G010285,Baseline,0,2021-04-06T00:00:00Z,Female,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00287G,PLA00287G,G010287,Baseline,0,2021-04-13T00:00:00Z,Male,White,"HCC prognostic marker,Liver transplantation",Non-alcoholic fatty liver (NAFL),NASH,F4,Yes,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00288G,PLA00288G,G010137,FU,1,2021-04-19T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00289G,PLA00289G,G010166,FU,1,2021-04-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00290G,PLA00290G,G010130,FU,1,2021-04-20T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00291G,PLA00291G,G010185,FU,1,2021-04-22T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00292G,PLA00292G,G010017,FU,1,2021-04-22T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00293G,PLA00293G,G010293,Baseline,0,2021-04-22T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00294G,PLA00294G,G010034,FU,1,2021-04-27T00:00:00Z,Male,White,HCC prognostic marker,Mixed,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00295G,PLA00295G,G010295,Baseline,0,2021-04-22T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00296G,PLA00296G,G010181,FU,1,2021-04-27T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00297G,PLA00297G,G010041,FU,2,2021-04-27T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00298G,PLA00298G,G010298,Baseline,0,2021-04-27T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,3,NA,4,NA,No connective tissue or H&E staining,No,Yes,Yes,NASH
+SER00299G,PLA00299G,G010150,FU,1,2021-05-04T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00300G,PLA00300G,G010007,FU,1,2021-05-04T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00301G,PLA00301G,G010051,FU,1,2021-05-10T00:00:00Z,Female,White,NASH biomarker,Other,NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00302G,PLA00302G,G010048,FU,1,2021-05-17T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00303G,PLA00303G,G010050,FU,1,2021-05-17T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00304G,PLA00304G,G010053,FU,2,2021-05-17T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00305G,PLA00305G,G010305,Baseline,0,2021-05-20T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,Yes,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00306G,PLA00306G,G010306,Baseline,0,2021-05-20T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00307G,PLA00307G,G010081,FU,1,2021-05-20T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00308G,PLA00308G,G010220,FU,1,2021-05-20T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00309G,PLA00309G,G010309,Baseline,0,2021-05-20T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Unknown,NA,NA,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00310G,PLA00310G,G010068,FU,1,2021-05-20T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00311G,PLA00311G,G010193,FU,1,2021-05-20T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00312G,PLA00312G,G010031,FU,1,2021-05-25T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00313G,PLA00313G,G010313,Baseline,0,2021-05-25T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00314G,PLA00314G,G010067,FU,2,2021-05-27T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00315G,PLA00315G,G010315,Baseline,0,2021-05-27T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Unknown,NASH,NA,No,No,No,Ghent,3,NA,4,NA,NA,NA,NA,Yes,NASH
+SER00317G,PLA00317G,G010317,Baseline,0,2021-05-27T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00318G,PLA00318G,G010318,Baseline,0,2021-05-31T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00319G,PLA00319G,G010236,FU,1,2021-05-31T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00320G,PLA00320G,G010066,FU,1,2021-05-31T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00321G,PLA00321G,G010099,FU,1,2021-06-03T00:00:00Z,Female,White,NASH biomarker,Autoimmune hepatitis,NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00322G,PLA00322G,G010322,Baseline,0,2021-06-03T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00323G,PLA00323G,G010199,FU,1,2021-06-03T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00324G,PLA00324G,G010324,Baseline,0,2021-06-03T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00325G,PLA00325G,G010325,Baseline,0,2021-06-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00326G,PLA00326G,G010140,FU,1,2021-06-08T00:00:00Z,Male,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NA,NA,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00327G,PLA00327G,G010109,FU,1,2021-06-08T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00328G,PLA00328G,G010078,FU,1,2021-06-08T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00329G,PLA00329G,G010083,FU,1,2021-06-08T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00330G,PLA00330G,G010089,FU,2,2021-06-08T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00331G,PLA00331G,G010076,FU,1,2021-06-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00332G,PLA00332G,G010332,Baseline,0,2021-06-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00333G,PLA00333G,G010080,FU,2,2021-06-10T00:00:00Z,Male,White,HCC prognostic marker,Hemochromatosis,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00334G,PLA00334G,G010052,FU,1,2021-06-10T00:00:00Z,Male,White,NASH biomarker,Unknown,NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00335G,PLA00335G,G010211,FU,1,2021-06-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00336G,PLA00336G,G010156,FU,2,2021-06-14T00:00:00Z,Female,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00337G,PLA00337G,G010197,FU,1,2021-06-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00338G,PLA00338G,G010074,FU,1,2021-06-15T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00339G,PLA00339G,G010098,FU,2,2021-06-15T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00340G,PLA00340G,G010087,FU,1,2021-06-15T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00341G,PLA00341G,G010077,FU,1,2021-06-15T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00342G,PLA00342G,G010176,FU,1,2021-06-15T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00343G,PLA00343G,G010102,FU,1,2021-06-15T00:00:00Z,Male,White,NASH biomarker,Unknown,NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00344G,PLA00344G,G010100,FU,1,2021-06-17T00:00:00Z,Male,White,HCC prognostic marker,Unknown,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00345G,PLA00345G,G010345,Baseline,0,2021-06-17T00:00:00Z,Female,White,HCC prognostic marker,Mixed,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00347G,PLA00347G,G010161,FU,1,2021-06-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00348G,PLA00348G,G010003,FU,1,2021-06-22T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00349G,PLA00349G,G010349,Baseline,0,2021-06-24T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,Yes,Yes,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00350G,PLA00350G,G010088,FU,1,2021-06-29T00:00:00Z,Male,Asian,HCC prognostic marker,Hepatitis B,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00351G,PLA00351G,G010004,FU,1,2021-06-29T00:00:00Z,Male,White,HCC prognostic marker,Diabetes mellitus,NASH,F4,No,No,NA,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00352G,PLA00352G,G010122,FU,1,2021-07-01T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00353G,PLA00353G,G010353,Baseline,0,2021-07-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00354G,PLA00354G,G010354,Baseline,0,2021-07-08T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F2,No,No,No,Ghent,0,NA,0,NA,NA,No,No,No,No NAFLD
+SER00355G,PLA00355G,G010125,FU,2,2021-07-08T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00356G,PLA00356G,G010356,Baseline,0,2021-07-08T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00357G,PLA00357G,G010031,FU,2,2021-07-19T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00359G,PLA00359G,G010160,FU,1,2021-07-19T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00360G,PLA00360G,G010086,FU,1,2021-07-19T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00361G,PLA00361G,G010361,Baseline,0,2021-07-20T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00362G,PLA00362G,G010313,FU,1,2021-07-22T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00363G,PLA00363G,G010216,FU,1,2021-07-22T00:00:00Z,Female,NA,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00364G,PLA00364G,G010117,FU,2,2021-07-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00365G,PLA00365G,G010239,FU,1,2021-08-23T00:00:00Z,Male,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00366G,PLA00366G,G010091,FU,1,2021-08-24T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00367G,PLA00367G,G010065,FU,2,2021-08-26T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00368G,PLA00368G,G010368,Baseline,0,2021-08-26T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00369G,PLA00369G,G010095,FU,2,2021-08-27T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00370G,PLA00370G,G010370,Baseline,0,2021-08-26T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00371G,PLA00371G,G010371,Baseline,0,2021-08-26T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,Yes,No,No,Ghent,3,NA,3,NA,NA,Yes,No,Yes,NASH
+SER00372G,PLA00372G,G010153,FU,2,2021-08-31T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00373G,PLA00373G,G010151,FU,1,2021-09-02T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F3,No,No,No,Ghent,1,NA,1,NA,NA,No,No,Yes,NASH
+SER00374G,PLA00374G,G010152,FU,1,2021-09-13T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00375G,PLA00375G,G010269,FU,1,2021-09-07T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00376G,PLA00376G,G010157,FU,1,2021-09-09T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00377G,PLA00377G,G010158,FU,2,2021-09-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00378G,PLA00378G,G010206,FU,1,2021-09-14T00:00:00Z,Male,Black or African American,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00379G,PLA00379G,G010178,FU,1,2021-09-14T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00380G,PLA00380G,G010380,Baseline,0,2021-09-14T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00381G,PLA00381G,G010170,FU,1,2021-09-16T00:00:00Z,Female,White,NASH biomarker,Unknown,NAFL,NA,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,NA,No,NA,NA
+SER00382G,PLA00382G,G010382,Baseline,0,2021-09-16T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00383G,PLA00383G,G010383,Baseline,0,2021-09-16T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00384G,PLA00384G,G010384,Baseline,0,2021-09-20T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00385G,PLA00385G,G010385,Baseline,0,2021-09-20T00:00:00Z,Female,White,HCC prognostic marker,Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00386G,PLA00386G,G010054,FU,2,2021-09-20T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00387G,PLA00387G,G010210,FU,1,2021-09-21T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00388G,PLA00388G,G010039,FU,2,2021-09-21T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00389G,PLA00389G,G010063,FU,2,2021-09-21T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00390G,PLA00390G,G010257,FU,1,2021-09-23T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00391G,PLA00391G,G010018,FU,2,2021-09-28T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00392G,PLA00392G,G010279,FU,1,2021-09-28T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00393G,PLA00393G,G010393,Baseline,0,2021-10-04T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00394G,PLA00394G,G010107,FU,2,2021-10-05T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00395G,PLA00395G,G010280,FU,1,2021-10-05T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00396G,PLA00396G,G010109,FU,2,2021-10-05T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,NA,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00397G,PLA00397G,G010042,FU,1,2021-10-11T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Primary biliary cholangitis (PBC),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00398G,PLA00398G,G010398,Baseline,0,2021-10-12T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00399G,PLA00399G,G010037,FU,1,2021-10-12T00:00:00Z,Male,Asian,NASH biomarker,Diabetes mellitus,NAFL,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00400G,PLA00400G,G010143,FU,1,2021-10-12T00:00:00Z,Male,White,NASH biomarker,Diabetes mellitus,NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00401G,PLA00401G,G010103,FU,2,2021-10-14T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00402G,PLA00402G,G010402,Baseline,0,2021-10-14T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00403G,PLA00403G,G010238,FU,1,2021-10-14T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00404G,PLA00404G,G010404,Baseline,0,2021-10-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00405G,PLA00405G,G010061,FU,1,2021-10-14T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00406G,PLA00406G,G010293,FU,1,2021-10-21T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00407G,PLA00407G,G010185,FU,2,2021-10-21T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00408G,PLA00408G,G010408,Baseline,0,2021-10-21T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00409G,PLA00409G,G010236,FU,2,2021-10-26T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00410G,PLA00410G,G010077,FU,2,2021-10-26T00:00:00Z,Female,White,HCC prognostic marker,Primary sclerosing cholangitis (PSC),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00411G,PLA00411G,G010041,FU,3,2021-10-26T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00412G,PLA00412G,G010176,FU,2,2021-10-26T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00413G,PLA00413G,G010413,Baseline,0,2021-10-26T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00414G,PLA00414G,G010240,FU,1,2021-11-15T00:00:00Z,Male,NA,HCC prognostic marker,Hemochromatosis,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00415G,PLA00415G,G010298,FU,1,2021-11-10T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00416G,PLA00416G,G010150,FU,2,2021-11-18T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00417G,PLA00417G,G010220,FU,2,2021-11-18T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Metabolic syndrome,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00418G,PLA00418G,G010048,FU,2,2021-11-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00419G,PLA00419G,G010193,FU,2,2021-11-18T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00420G,PLA00420G,G010420,Baseline,0,2021-11-23T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00421G,PLA00421G,G010315,FU,1,2021-11-25T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Unknown,NAFL,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00422G,PLA00422G,G010067,FU,3,2021-11-25T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00423G,PLA00423G,G010132,FU,2,2021-11-30T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Mixed,NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00424G,PLA00424G,G010162,FU,2,2021-11-30T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00425G,PLA00425G,G010204,FU,1,2021-12-06T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00426G,PLA00426G,G010097,FU,2,2021-12-07T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Primary biliary cholangitis (PBC),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00427G,PLA00427G,G010332,FU,1,2021-12-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,NA,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00428G,PLA00428G,G010322,FU,1,2021-12-07T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00429G,PLA00429G,G010099,FU,2,2021-12-07T00:00:00Z,Female,White,NASH biomarker,Autoimmune hepatitis,NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00430G,PLA00430G,G010430,Baseline,0,2021-12-09T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00431G,PLA00431G,G010431,Baseline,0,2021-12-09T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NASH,F3,No,No,No,Ghent,4,NA,6,b,NA,No,Yes,Yes,NASH
+SER00432G,PLA00432G,G010087,FU,2,2021-12-14T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00433G,PLA00433G,G010324,FU,1,2021-12-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NA,NA,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,NA,NA,NA,NA
+SER00434G,PLA00434G,G010211,FU,2,2021-12-14T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00435G,PLA00435G,G010094,FU,2,2021-12-16T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00436G,PLA00436G,G010313,FU,2,2021-12-21T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00437G,PLA00437G,G010141,FU,2,2021-12-21T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00438G,PLA00438G,G010438,Baseline,0,2021-12-21T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00439G,PLA00439G,G010346,FU,1,2021-12-21T00:00:00Z,Female,White,HCC prognostic marker,Unknown,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00440G,PLA00440G,G010440,Baseline,0,2021-12-23T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00441G,PLA00441G,G010229,FU,1,2021-12-23T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Obesity (BMI ≥ 30),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00443G,PLA00443G,G010382,FU,1,2022-01-13T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,3,NA,4,NA,NA,Yes,Yes,Yes,NASH
+SER00444G,PLA00444G,G010444,Baseline,0,2022-01-13T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F1,NA,No,No,Ghent,1,NA,1,NA,NA,No,No,Yes,NAFL
+SER00445G,PLA00445G,G010445,Baseline,0,2022-01-13T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00446G,PLA00446G,G010113,FU,1,2022-01-17T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NAFL,NA,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,NA,No,NA,NA
+SER00447G,PLA00447G,G010318,FU,1,2022-01-17T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00448G,PLA00448G,G010317,FU,1,2022-01-17T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00449G,PLA00449G,G010306,FU,1,2022-01-17T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,Yes,Yes,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00450G,PLA00450G,G010450,Baseline,0,2022-01-17T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00451G,PLA00451G,G010084,FU,2,2022-01-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00452G,PLA00452G,G010199,FU,2,2022-01-18T00:00:00Z,Female,White,HCC prognostic marker,Unknown,NASH,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00453G,PLA00453G,G010361,FU,1,2022-01-18T00:00:00Z,Female,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00455G,PLA00455G,G010243,FU,1,2022-02-18T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00456G,PLA00456G,G010237,FU,1,2022-01-20T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00457G,PLA00457G,G010226,FU,1,2022-01-20T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Diabetes mellitus,NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00459G,PLA00459G,G010371,FU,1,2022-02-07T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,Yes,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00460G,PLA00460G,G010021,FU,2,2022-02-08T00:00:00Z,Male,White,HCC prognostic marker,Metabolic syndrome,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00461G,PLA00461G,G010253,FU,1,2022-02-08T00:00:00Z,Male,White,HCC prognostic marker,Other,NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00462G,PLA00462G,G010089,FU,3,2022-02-15T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00463G,PLA00463G,G010074,FU,2,2022-02-15T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis B,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00464G,PLA00464G,G010018,FU,3,2022-02-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00465G,PLA00465G,G010063,FU,3,2022-02-15T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00466G,PLA00466G,G010153,FU,3,2022-02-22T00:00:00Z,Male,White,HCC prognostic marker,Hepatitis C,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00467G,PLA00467G,G010048,FU,3,2022-02-15T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00468G,PLA00468G,G010104,FU,1,2022-02-22T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00469G,PLA00469G,G010065,FU,3,2022-02-24T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F2,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00470G,PLA00470G,G010255,FU,1,2022-02-24T00:00:00Z,Male,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00471G,PLA00471G,G010040,FU,2,2022-02-24T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00472G,PLA00472G,G010091,FU,2,2022-03-08T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00473G,PLA00473G,G010144,FU,2,2022-03-10T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00474G,PLA00474G,G010404,FU,1,2022-03-10T00:00:00Z,Male,White,HCC prognostic marker,Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00475G,PLA00475G,G010088,FU,2,2022-03-15T00:00:00Z,Male,Asian,HCC prognostic marker,Hepatitis B,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00476G,PLA00476G,G010380,FU,1,2022-03-15T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,NA,No,No,No,Ghent,NA,NA,NA,NA,NA,NA,No,NA,NA
+SER00477G,PLA00477G,G010206,FU,2,2022-03-22T00:00:00Z,Male,Black or African American,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00478G,PLA00478G,G010023,FU,1,2022-03-24T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00479G,PLA00479G,G010267,FU,1,2022-03-24T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NAFL,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00480G,PLA00480G,G010178,FU,2,2022-03-29T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00481G,PLA00481G,G010383,FU,1,2022-03-29T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00482G,PLA00482G,G010079,FU,2,2022-03-29T00:00:00Z,Male,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00483G,PLA00483G,G010356,FU,1,2022-03-29T00:00:00Z,Female,White,HCC prognostic marker,Substance use,No NAFLD,F4,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00484G,PLA00484G,G010107,FU,3,2022-04-05T00:00:00Z,Female,White,HCC prognostic marker,Other,No NAFLD,F1,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00485G,PLA00485G,G010160,FU,2,2022-04-04T00:00:00Z,Male,White,HCC prognostic marker,Other,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00486G,PLA00286G,G010134,FU,1,2021-04-12T00:00:00Z,Male,White,HCC prognostic marker,Diabetes mellitus,NAFL,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00486G,PLA00486G,G010280,FU,2,2022-04-05T00:00:00Z,Female,White,HCC prognostic marker,Substance use,NA,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,NA,NA,NA
+SER00487G,PLA00487G,G010109,FU,3,2022-04-05T00:00:00Z,Female,White,HCC prognostic marker,Primary biliary cholangitis (PBC),No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00488G,PLA00488G,G010011,FU,2,2022-04-05T00:00:00Z,Female,White,HCC prognostic marker,Obesity (BMI ≥ 30),NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
+SER00489G,PLA00489G,G010383,FU,2,2022-04-12T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00490G,PLA00490G,G010041,FU,4,2022-04-12T00:00:00Z,Male,White,HCC prognostic marker,Substance use,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00491G,PLA00491G,G010430,FU,1,2022-04-14T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00492G,PLA00492G,G010293,FU,2,2022-04-14T00:00:00Z,Female,White,NASH biomarker,Non-alcoholic fatty liver (NAFL),NASH,F0,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00493G,PLA00493G,G010402,FU,1,2022-04-14T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NAFL,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,No,NA,NA
+SER00494G,PLA00494G,G010152,FU,2,2022-04-14T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,NA,NA,NA,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00495G,PLA00495G,G010162,FU,3,2022-04-19T00:00:00Z,Female,White,HCC prognostic marker,Autoimmune hepatitis,No NAFLD,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,No,NA,NA
+SER00496G,PLA00496G,G010317,FU,2,2022-04-21T00:00:00Z,Female,White,"NASH biomarker,HCC prognostic marker",Non-alcoholic fatty liver (NAFL),NASH,F3,No,No,No,Ghent,NA,NA,NA,NA,NA,No,Yes,NA,NA
+SER00497G,PLA00497G,G010185,FU,3,2022-04-21T00:00:00Z,Male,White,"NASH biomarker,HCC prognostic marker",Substance use,NASH,F4,No,No,No,Ghent,NA,NA,NA,NA,NA,Yes,Yes,NA,NA
