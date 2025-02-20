@@ -3,9 +3,9 @@
 ---
 
 
-* **Suplementary_Table1.csv**: cohort 1 sample annotation 
+- **Suplementary_Table1.csv**: cohort 1 sample annotation 
 
-* **Suplementary_Table2.csv**: cohort 2 sample annotation 
+- **Suplementary_Table2.csv**: cohort 2 sample annotation 
 
 - **counts.zip**: cohort 1 and 2 count matrices 
 
