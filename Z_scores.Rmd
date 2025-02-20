@@ -1,0 +1,182 @@
+---
+title: "Z_scores"
+author: "Franco"
+date: "2024-04-03"
+output: html_document
+---
+
+# QC metrics
+```{r}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+require(dplyr)
+require(tidyverse)
+require(ggbeeswarm)
+require(biomaRt)
+if (rstudioapi::isAvailable()) {
+  setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+}
+
+library(conflicted)
+
+conflict_prefer("filter", "dplyr")
+conflict_prefer("desc", "dplyr")
+conflict_prefer("select", "dplyr")
+conflict_prefer("slice", "dplyr")
+conflict_prefer("rename", "dplyr")
+conflict_prefer('intersect', 'dplyr')
+conflict_prefer("count", "dplyr")
+
+color_panel<-c("#23496b","pink", "gray","#e35d6a","#428bca","#e87810","#ffbf00","#039748","#cc2028","darkgray","#5bb75b")
+theme_point<-theme_bw()+theme(strip.background = element_blank())
+
+theme_bar<-theme_bw()+theme(axis.text.x = element_text(angle=90, vjust=0.5, hjust=1),strip.background = element_blank(),axis.ticks.x = element_blank(),axis.line.x = element_blank())
+theme_boxplot<-theme_classic()+theme(axis.text.x = element_text(angle=90, vjust=0.5, hjust=1),strip.background = element_blank(),axis.ticks.x = element_blank(),axis.title.x = element_blank(),axis.line.x = element_blank(),legend.position = "none")
+
+data_dir <- "./Data"
+```
+
+
+## Number of reads
+```{r}
+#load cohort2 read number
+Nreads2 <- read_csv(paste0(data_dir,"/Reads_Number.csv")) %>% dplyr::select(!c(1))
+reads_pros_melt <- Nreads2 %>% pivot_longer(!c(RNAID, Run), names_to="status", values_to="reads")
+#load cohort1 read counts
+Nreads1 <- read.table(paste0(data_dir, "/total_readcount.txt"),header=T, sep="\t", col.names = c("RNAID", "raw", "trimmed"))
+Nreads1$Run<-"Cohort1"
+#Nreads1$Cohort<-"Cohort1"
+reads_retro_melt <- Nreads1 %>% pivot_longer(!c(RNAID,Run), names_to="status", values_to="reads")
+#bind retro and prospective
+reads_total <- rbind(reads_retro_melt, reads_pros_melt)
+#Calculate z_scores
+Nreads2<- Nreads2%>%mutate(Z_score = (trimmed - mean(trimmed, na.rm=T))/sd(trimmed, na.rm=T))
+Nreads1<- Nreads1%>%mutate(Z_score = (trimmed - mean(trimmed, na.rm=T))/sd(trimmed, na.rm=T))
+
+#calculate the z score threshold
+#C1
+# lim_z_pos_1 <-round((3 * sd(Nreads1$trimmed)) + (mean(Nreads1$trimmed)), 0)
+# lim_z_neg_1 <-round((-3 * sd(Nreads1$trimmed)) + (mean(Nreads1$trimmed)), 0)
+# #C2
+# lim_z_pos_2 <-round((3 * sd(Nreads2$trimmed)) + (mean(Nreads2$trimmed)), 0)
+# lim_z_neg_2 <-round((-3 * sd(Nreads2$trimmed)) + (mean(Nreads2$trimmed)), 0)
+```
+
+## Strandedness
+```{r}
+strand_df <- read.csv(paste0(data_dir, "/Strand.csv"))
+strand_df_C1 <- strand_df[strand_df$Run=="Cohort1",]
+strand_df_C2 <- strand_df[strand_df$Run!="Cohort1",]
+strand_df_C1<-strand_df_C1%>%mutate(Z_score = (Prct - mean(Prct, na.rm=T))/sd(Prct, na.rm=T))
+strand_df_C2<-strand_df_C2%>%mutate(Z_score = (Prct - mean(Prct, na.rm=T))/sd(Prct, na.rm=T))
+```
+
+## Mapping percentage
+```{r}
+star_df <- read.csv(paste0(data_dir, "/prctStar.csv"), row.names = c(1))
+star_df_C1 <- star_df[star_df$Run=="Cohort1",]
+star_df_C2 <- star_df[star_df$Run!="Cohort1",]
+
+star_df_C1<-star_df_C1%>%mutate(Z_score = (uniquely_mapped_percent - mean(uniquely_mapped_percent, na.rm=T))/sd(uniquely_mapped_percent, na.rm=T))
+
+star_df_C2<-star_df_C2%>%mutate(Z_score = (uniquely_mapped_percent - mean(uniquely_mapped_percent, na.rm=T))/sd(uniquely_mapped_percent, na.rm=T))
+```
+
+## Duplication
+
+```{r}
+dedup_df <- read.csv((paste0(data_dir, "/dedup.csv")))
+
+dedup_df_C1 <- dedup_df[dedup_df$Run=="Cohort1",]
+dedup_df_C2 <- dedup_df[dedup_df$Run!="Cohort1",]
+
+dedup_df_C1<-dedup_df_C1%>%mutate(Z_score = (prct_dedup - mean(prct_dedup, na.rm=T))/sd(prct_dedup, na.rm=T))
+dedup_df_C2<-dedup_df_C2%>%mutate(Z_score = (prct_dedup - mean(prct_dedup, na.rm=T))/sd(prct_dedup, na.rm=T))
+```
+
+## Number of genes
+
+```{r}
+
+genes_df <- read.csv(paste0(data_dir, "/Ngenes.csv"))
+genes_df_C1 <- genes_df[genes_df$Run=="Cohort1",]
+genes_df_C2 <- genes_df[genes_df$Run!="Cohort1",]
+
+
+genes_df_C1 <- genes_df_C1%>%mutate(Z_score = (genes_above10 - mean(genes_above10, na.rm=T))/sd(genes_above10, na.rm=T))
+genes_df_C2 <- genes_df_C2%>%mutate(Z_score = (genes_above10 - mean(genes_above10, na.rm=T))/sd(genes_above10, na.rm=T))
+```
+
+## Spikes
+
+```{r}
+spikes_df_C1 <- read.csv(paste0(data_dir, "/SpikeRatio_C1.csv"))
+spikes_df_C2_raw <- read.csv(paste0(data_dir, "/SpikeRatio_C2.csv"))
+
+spikes_df_C1 <- spikes_df_C1%>%mutate(Z_score = (EndovsERCC - mean(EndovsERCC, na.rm=T))/sd(EndovsERCC, na.rm=T))
+spikes_df_C2 <- spikes_df_C2_raw[is.finite(spikes_df_C2_raw$EndovsERCC),]%>%mutate(Z_score = (EndovsERCC - mean(EndovsERCC, na.rm=T))/sd(EndovsERCC, na.rm=T))
+
+Sequin_df_C1 <- spikes_df_C1%>%mutate(Z_score = (EndovsSeq - mean(EndovsSeq, na.rm=T))/sd(EndovsSeq, na.rm=T))
+Sequin_df_C2 <- spikes_df_C2%>%mutate(Z_score = (EndovsSeq - mean(EndovsSeq, na.rm=T))/sd(EndovsSeq, na.rm=T))
+
+```
+
+```{r}
+zscore_df_C1 <- Nreads1[,c("RNAID", "Z_score")]
+zscore_df_C1 <- zscore_df_C1 %>%  left_join(., strand_df_C1[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., star_df_C1[,c("Sample", "Z_score")], by=c("RNAID"="Sample")) %>% 
+  left_join(., dedup_df_C1[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., genes_df_C1[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., spikes_df_C1[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., Sequin_df_C1[,c("RNAID", "Z_score")], by="RNAID")
+colnames(zscore_df_C1)<- c("RNAID", "Nreads", "Strandedness", "Mapping", "Duplication", "Ngenes", "EndovsERCC", "EndovsSequin")
+zscore_df_C1 <- zscore_df_C1 %>% left_join(., star_df_C1[,c("Sample", "Z_score")], by=c("RNAID"="Sample"))
+
+zscore_df_C2 <- Nreads2[,c("RNAID", "Z_score")]
+zscore_df_C2 <- zscore_df_C2 %>%  left_join(., strand_df_C2[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., star_df_C2[,c("Sample", "Z_score")], by=c("RNAID"="Sample")) %>% 
+  left_join(., dedup_df_C2[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., genes_df_C2[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., spikes_df_C2[,c("RNAID", "Z_score")], by="RNAID") %>% 
+  left_join(., Sequin_df_C2[,c("RNAID", "Z_score")], by="RNAID")
+colnames(zscore_df_C2)<- c("RNAID", "Nreads", "Strandedness", "Mapping", "Duplication", "Ngenes", "EndovsERCC", "EndovsSequin")
+
+zscore_df_C2 <- zscore_df_C2 %>% left_join(., star_df_C2[,c("Sample", "Z_score")], by=c("RNAID"="Sample"))
+zscore_df_C2 <- as.data.frame(zscore_df_C2)
+#write.csv(zscore_df_C1, file = paste0(data_dir, "Zscores_C1.csv"), row.names = F)
+#write.csv(zscore_df_C2, file = paste0(data_dir, "Zscores_C2.csv"), row.names = F)
+
+```
+
+## Outliers
+
+```{r}
+z_Nreads_C1<- zscore_df_C1[abs(zscore_df_C1$Nreads) > 3, c("RNAID")]
+z_strand_C1<- zscore_df_C1[abs(zscore_df_C1$Strandedness) > 3, c("RNAID")]
+z_star_C1<- zscore_df_C1[abs(zscore_df_C1$Mapping) > 3, c("RNAID")]
+z_dedup_C1<- zscore_df_C1[abs(zscore_df_C1$Duplication) > 3, c("RNAID")]
+z_genes_C1<- zscore_df_C1[abs(zscore_df_C1$Ngenes) > 3, c("RNAID")]
+z_ERCC_C1<- zscore_df_C1[abs(zscore_df_C1$EndovsERCC) > 3, c("RNAID")]
+z_Seq_C1<- zscore_df_C1[abs(zscore_df_C1$EndovsSequin) > 3, c("RNAID")]
+ouliers_C1<-unique(c(z_Nreads_C1, z_strand_C1, z_star_C1, z_dedup_C1, z_genes_C1, z_ERCC_C1, z_Seq_C1))
+ouliers_C1_df<-data.frame("RNAID" = ouliers_C1[!is.na(ouliers_C1)])
+
+z_Nreads_C2<- zscore_df_C2[abs(zscore_df_C2$Nreads) > 3, c("RNAID")]
+z_strand_C2<- zscore_df_C2[abs(zscore_df_C2$Strandedness) > 3, c("RNAID")]
+z_star_C2<- zscore_df_C2[abs(zscore_df_C2$Mapping) > 3, c("RNAID")]
+z_dedup_C2<- zscore_df_C2[abs(zscore_df_C2$Duplication) > 3, c("RNAID")]
+z_genes_C2<- zscore_df_C2[abs(zscore_df_C2$Ngenes) > 3, c("RNAID")]
+z_ERCC_C2<- zscore_df_C2[abs(zscore_df_C2$EndovsERCC) > 3, c("RNAID")]
+z_Seq_C2<- zscore_df_C2[abs(zscore_df_C2$EndovsSequin) > 3, c("RNAID")]
+ouliers_C2<-unique(c(z_Nreads_C2, z_strand_C2, z_star_C2, z_dedup_C2, z_genes_C2, z_ERCC_C2, z_Seq_C2))
+ouliers_C2_df<-data.frame("RNAID" = ouliers_C2[!is.na(ouliers_C2)])
+
+# write.table(ouliers_C1_df, file = paste0(data_dir, "/OutliersC1.txt"), row.names = F, quote = F)
+# write.table(ouliers_C2_df, file = paste0(data_dir, "/OutliersC2.txt"), row.names = F, quote = F)
+```
+
+
+
+
+
+
+

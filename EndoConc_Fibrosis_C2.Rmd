@@ -1,0 +1,238 @@
+---
+title: "Endogenous RNA mass"
+author: "Franco Poma"
+date: "2025-02-11"
+output: html_document
+---
+
+# Load libraries
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+library(tidyverse)
+require(readr)
+library(DT)
+library(ggplot2)
+library(stringr)
+require(ggbeeswarm)
+color_panel<-c("#e35d6a","#428bca","darkgray","#e87810","#5bb75b", "#23496b","#ffbf00","#cc2028","#039748","pink","gray")
+theme_final<- theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 8))
+data_dir <- "./Data"
+```
+
+# Make annotation only Nash subcohort
+
+```{r, warning=FALSE, message=FALSE}
+#Load outliers
+outliers_df<-read.table(paste0(data_dir, "/OutliersC2.txt"), header = T) # set of 41 outliers.
+#Annotation
+ann<-read_tsv(paste0(data_dir, "/Annotation_Cohort2.tsv"))
+#Select only NASH cohort and baseline samples
+pDat_NASH<- ann %>% filter(str_detect(Cohort, "NASH"))
+pDat_NASH <- pDat_NASH %>% dplyr::filter(Visit_Type=="Baseline")
+
+#Removing NoNAFLD samples
+pDat_NASH <- pDat_NASH %>% dplyr::filter(NASH!="No NAFLD")
+colnames(pDat_NASH)[1]<-"RNAID"
+#Removing Outliers
+pDat_NASH<-pDat_NASH %>% dplyr::filter(!RNAID%in%outliers_df$RNAID)
+#New varaible NASH_risk
+pDat_NASH <- pDat_NASH %>%  mutate("Risk" = as.factor(if_else(pDat_NASH$NASH=="NASH"&pDat_NASH$Fibrosis%in%c("F2","F3", "F4", "F5", "F6"), "Risk", "No_Risk")))
+pDat_NASH$Fibrosis <- factor(pDat_NASH$Fibrosis, levels = c("F0", "F1", "F2", "F3", "F4"))
+```
+
+# Load counts
+
+```{r, warning=FALSE, message=FALSE}
+htseq <- read_delim(paste0(data_dir, "/htseq_cohort2.txt"))
+#remove ambiguous, not unique, no feature
+htseq <- htseq %>% filter(!str_detect(ensembl_gene_id, "^__"))
+#Select only Nash cohort counts
+htseq <- htseq  %>%
+  column_to_rownames("ensembl_gene_id")
+
+count_table_NASH <- htseq %>% dplyr::select(pDat_NASH$RNAID)
+
+count_table_NASH <- count_table_NASH  %>%
+  rownames_to_column("ensembl_gene_id")
+```
+
+# RNA concentration
+
+### Step 1: Calculate the Diluted Concentration of the Spike-In
+
+If the stock concentration is $C_{\text{stock}}$ (in attomol/μL) and the dilution factor is $D$, the diluted concentration is: $$
+C_{\text{diluted}} = \frac{C_{\text{stock}}}{D}
+$$
+
+### Step 2: Calculate Total Moles Added to the Lysis Buffer
+
+Given a volume $V_{\text{added}}$ (in μL) of the diluted spike-in solution: $$
+n_{\text{total}} = C_{\text{diluted}} \times V_{\text{added}} \times 10^{-18} \quad \text{(moles)}
+$$ *Note:* The factor $10^{-18}$ converts attomol to mol.
+
+### Step 3: Adjust for the Volume Transferred During Purification
+
+If the total lysis buffer volume is $V_{\text{lysis}}$ (μL) and the volume transferred is $V_{\text{transferred}}$ (μL), then the moles in the transferred volume are: $$
+n_{\text{transferred}} = n_{\text{total}} \times \frac{V_{\text{transferred}}}{V_{\text{lysis}}}
+$$
+
+### Step 4: Calculate the Molecular Weight of the Spike-In RNA
+
+For an RNA molecule of length $L$ nucleotides, its molecular weight is: $$
+MW = (L \times 321.47\ \text{g/mol}) + 18.02\ \text{g/mol}
+$$
+
+### Step 5: Calculate the Mass of the Spike-In
+
+The mass (in grams) of the spike-in in the transferred volume is: $$
+\text{Mass}_{\text{spike}} = n_{\text{transferred}} \times MW
+$$ To convert this mass to nanograms (ng): $$
+\text{Mass}_{\text{spike}}\, (\text{ng}) = n_{\text{transferred}} \times MW \times 10^9
+$$
+
+### Step 6: Estimate the Mass of Endogenous RNA
+
+Using the sequencing read counts for endogenous RNA ($\text{Reads}_{\text{endogenous}}$) and for the spike-in ($\text{Reads}_{\text{spike}}$), the mass of endogenous RNA is estimated by: $$
+\text{Mass}_{\text{endogenous}} = \text{Mass}_{\text{spike}} \times \frac{\text{Reads}_{\text{endogenous}}}{\text{Reads}_{\text{spike}}}
+$$ \
+
+### Step 7: Convert the Mass of Endogenous RNA to Concentration (ng/ml)
+
+Using the sequencing read counts for endogenous RNA ($\text{Reads}_{\text{endogenous}}$) and for the spike-in ($\text{Reads}_{\text{spike}}$), the mass of endogenous RNA is estimated by: $$
+\text{Concentration} =\frac{\text{Mass}_{\text{endogenous}}}{\text{PlasmaVol}}
+$$
+
+```{r, warning=FALSE, message=FALSE}
+#Keep only sequin spikes
+Spikes_counts <- filter(count_table_NASH, str_detect(ensembl_gene_id,"R1|R2"))
+
+## get most abundant spike
+Spikes_counts$Total <- rowSums(Spikes_counts[2:175])
+Top_Spike<-Spikes_counts[order(Spikes_counts$Total, decreasing=T),][1,]
+rownames(Top_Spike)<-NULL
+Top_Spike <- Top_Spike[,1:ncol(Top_Spike)-1]
+Top_Spike <- Top_Spike %>% column_to_rownames(var = "ensembl_gene_id")
+Top_Spike_name <- rownames(Top_Spike)[1]
+print (paste0("Top Spike is: ", Top_Spike_name))
+```
+
+```{r, warning=FALSE, message=FALSE}
+Top_Spike <- as.data.frame(t(Top_Spike))
+Top_Spike <- Top_Spike %>% rownames_to_column(var="RNAID")
+
+# Load spike counts and merge
+Spikes_C2<- read.csv(paste0(data_dir, "/SpikeRatio_C2.csv"))
+
+
+Top_Spike <- left_join(Top_Spike, Spikes_C2)
+#Top spike is R2_65
+#concentration attom/ul got from provider
+spike_stock<-966.797
+#length (nt)
+spike_len<-908
+#Sequin mix vol added to lysis buffer (ul)
+spike_vol<-8.75
+dilution <- 1/3000
+#Lysis Buffer Volume ul
+LysisVol_initial<-2500
+LysisVol_Final<-2000
+
+#moles of sequin R2_65 in 8.75ul
+spike_moles <- spike_stock*dilution*spike_vol*10^-18
+#Moles transferred to final mix
+spike_moles_final <- spike_moles *(LysisVol_Final/LysisVol_initial)
+
+#Molecular weight of spike (g/mol) - standard formula to calculate weight of a single stranded RNA molecule
+spike_mw <- (spike_len * 321.47) + 18.02
+#Spike mass (g) added to the mix
+spike_mass <- spike_moles_final * spike_mw
+#Spike mass in nanograms
+spike_mass_ng <- spike_mass * 10^9
+#endogenous RNA mass(ng) in 2000ul
+Top_Spike <- Top_Spike %>% mutate(Endo_mass=spike_mass_ng*endogenous/R2_65)
+#endogenous RNA concentration per ul 
+Top_Spike <- left_join(Top_Spike, pDat_NASH, by="RNAID") 
+Top_Spike$Plasma_input_vol_ul  <- if_else(Top_Spike$`QC_Plasma_input_volume_(µl)` == "less than 2 ml", 1990, as.numeric(Top_Spike$`QC_Plasma_input_volume_(µl)`))
+Top_Spike <- Top_Spike %>% mutate(Endo_conc=Endo_mass/Plasma_input_vol_ul)
+datatable(Top_Spike)
+```
+
+# Statistical Analysis
+
+## Distribution of endogenous RNA concentration
+
+```{r, warning=FALSE, message=FALSE}
+# png("qqplot_NashRisk.png", width = 800, height = 600)
+qqnorm(Top_Spike$Endo_conc)
+qqline(Top_Spike$Endo_conc, col = "red")
+```
+
+```{r, warning=FALSE, message=FALSE}
+hist(Top_Spike$Endo_conc, breaks = 20, probability = TRUE,
+     main = "Histogram of Endogenous Mass", xlab = "Endogenous Mass")
+lines(density(Top_Spike$Endo_conc), col = "blue")
+
+```
+
+**Largely skewed distribution. There are 4 samples with significant larger endogenous RNA concentration. Therefore a wilcoxon Rank-Sum for two groups will be applied.**
+
+#### Nash Risk
+
+Taking into account Hospital as batch effect
+
+```{r, warning=FALSE, message=FALSE}
+#install.packages("coin")
+library(coin)
+
+Top_Spike$Hospital <- as.factor(Top_Spike$Hospital)
+coin::wilcox_test(Endo_conc ~ Risk | Hospital, data = Top_Spike,
+            distribution = "exact")
+```
+
+Without hospital
+
+```{r}
+coin::wilcox_test(Endo_conc ~ Risk, data = Top_Spike)
+```
+
+No significant differences between Nash Risk groups.
+
+#### Fibrosis
+
+Taking into account Hospital as batch effect
+
+```{r, warning=FALSE, message=FALSE}
+data <- Top_Spike %>% dplyr::filter(Fibrosis%in% c("F0", "F4"))%>%
+  droplevels()
+coin::wilcox_test(Endo_conc ~ Fibrosis | Hospital, data = data,
+            distribution = "exact")
+```
+
+Without hospital
+
+```{r, warning=FALSE, message=FALSE}
+coin::wilcox_test(Endo_conc ~ Fibrosis, data = data)
+```
+
+Both tests show a significant difference in the endogenous RNA concentration between Fibrosis F0 and F4 groups.
+
+```{r, warning=FALSE, message=FALSE}
+res_df <- data %>% dplyr::group_by(Fibrosis) %>% summarise(mean= sprintf("%.2e", mean(Endo_conc)), sd= sprintf("%.2e", sd(Endo_conc)))
+
+datatable(res_df)
+```
+
+**Visualizing groups**
+
+```{r, warning=FALSE, message=FALSE}
+
+
+fib_plt1 <- data %>%  ggplot(aes(x=Fibrosis, y=Endo_conc, color=Fibrosis)) +geom_boxplot() + 
+  geom_beeswarm(alpha=0.3, size = 0.05, dodge.width = 0.8, cex = 0.3) + scale_color_manual(values = color_panel)+
+  geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() + theme_final + ylab("EndogenousRNA(ng/ml)")
+
+fib_plt1
+
+```

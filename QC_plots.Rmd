@@ -1,0 +1,535 @@
+---
+title: "Manuscript QC plots"
+author: "Franco"
+date: "2024-03-28"
+output: html_document
+---
+
+# QC metrics
+```{r}
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+if (rstudioapi::isAvailable()) {
+  setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+}
+
+require(dplyr)
+require(tidyverse)
+require(ggbeeswarm)
+require(biomaRt)
+
+color_panel<-c("#e35d6a","#428bca","darkgray","#e87810","#5bb75b", "#23496b","#ffbf00","#cc2028","#039748","pink","gray")
+theme_point<-theme_bw()+theme(strip.background = element_blank())
+
+theme_bar<-theme_bw()+theme(axis.text.x = element_text(angle=90, vjust=0.5, hjust=1),strip.background = element_blank(),axis.ticks.x = element_blank(),axis.line.x = element_blank())
+theme_boxplot<-theme_classic()+theme(axis.text.x = element_text(angle=90, vjust=0.5, hjust=1),strip.background = element_blank(),axis.ticks.x = element_blank(),axis.title.x = element_blank(),axis.line.x = element_blank(),legend.position = "none")
+
+data_dir <- "./Data"
+```
+
+```{r, warning=FALSE, message=FALSE}
+#Annotation
+lab_ann <- read_csv(paste0(data_dir, "/Suplementary_Table1.csv"))
+```
+
+## Number of reads
+```{r}
+#load cohort2 read number
+Nreads2 <- read_csv(paste0(data_dir,"/Reads_Number.csv")) %>% dplyr::select(!c(1))
+reads_pros_melt <- Nreads2 %>% pivot_longer(!c(RNAID, Run), names_to="status", values_to="reads")
+#load cohort1 read counts
+Nreads1 <- read.table(paste0(data_dir, "/total_readcount.txt"),header=T, sep="\t", col.names = c("RNAID", "raw", "trimmed"))
+Nreads1$Run<-"Cohort1"
+#Nreads1$Cohort<-"Cohort1"
+reads_retro_melt <- Nreads1 %>% pivot_longer(!c(RNAID,Run), names_to="status", values_to="reads")
+#bind retro and prospective
+reads_total <- rbind(reads_retro_melt, reads_pros_melt)
+reads_total <- reads_total %>% dplyr::mutate("cohort" = ifelse(Run=="Cohort1", "Cohort1", "Cohort2"))
+#Calculate z_scores
+Nreads2<- Nreads2%>%mutate(Z_score = (trimmed - mean(trimmed, na.rm=T))/sd(trimmed, na.rm=T))
+Nreads1<- Nreads1%>%mutate(Z_score = (trimmed - mean(trimmed, na.rm=T))/sd(trimmed, na.rm=T))
+```
+
+```{r}
+pd <- position_dodge(0.8)
+
+reads_retro_boxplot<- reads_retro_melt %>% dplyr::filter(status=='trimmed') %>%
+  ggplot(aes(x=Run, y=reads/1e6, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 0.5) +
+    #scale_fill_viridis(discrete = TRUE, alpha=0.7) +
+  scale_color_manual(values = color_panel[2])+
+    geom_beeswarm(alpha=0.3, size = 0.05, dodge.width = 0.8, cex = 0.3) +
+  scale_y_continuous(trans = "log10") +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+ylab("Million trimmed reads [log10]")
+
+reads_pro_boxplot<- reads_pros_melt %>% dplyr::filter(status=='trimmed') %>%
+  ggplot(aes(x=Run, y=reads/1e6, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 1) +
+  scale_color_manual(values = color_panel)+
+    geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+  scale_y_continuous(trans = "log10") +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+ylab("Million trimmed reads [log10]")
+
+reads_retro_boxplot
+reads_pro_boxplot
+```
+
+```{r, fig.align='center', fig.height=6, fig.width=8}
+pd <- position_dodge(0.8)
+
+reads_boxplot<- reads_total %>% dplyr::filter(status=='trimmed') %>%
+  ggplot(aes(x=Run, y=reads/1e6, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 0.5) +
+    #scale_fill_viridis(discrete = TRUE, alpha=0.7) +
+  scale_color_manual(values = color_panel)+
+    geom_beeswarm(alpha=0.3, size = 0.05, dodge.width = 0.8, cex = 0.3) +
+  scale_y_continuous(trans = "log10") +
+  facet_grid(.~cohort, scales = "free_x", space="free") +
+    theme_bw() +ylab("10log of Number reads (Million)")
+
+reads_boxplot
+#ggsave(paste0(data_dir, "./Figures/Nreads_box.png"), width = 8, height = 6, reads_boxplot, dpi= 500)
+```
+
+## Strandedness
+
+```{r}
+#Load file
+strand_df <- read.csv(paste0(data_dir, "/Strand.csv"))
+strand_df <- strand_df %>% dplyr::mutate("cohort" = ifelse(Run=="Cohort1", "Cohort1", "Cohort2"))
+
+strand_plot_retro <- strand_df %>% dplyr::filter(Run=="Cohort1") %>% 
+  ggplot(aes(x=Run, y=Prct, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 0.5) +
+  #scale_fill_viridis(discrete = TRUE, alpha=0.7) +
+  scale_color_manual(values = color_panel[2])+
+  geom_beeswarm(alpha=0.3, size = 0.1, dodge.width = 0.8, cex = 0.3) +
+  theme_bw() +
+  theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+ ylab("% Strandedness")
+
+strand_plot_pro <- strand_df %>% dplyr::filter(Run!="Cohort1") %>% 
+  ggplot(aes(x=Run, y=Prct, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  scale_color_manual(values = color_panel)+
+  geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+ylab("% Strandedness")
+
+
+strand_plot_pro
+strand_plot_retro
+
+#ggsave(paste0(data_dir, "/Figures/Strand.png"), width = 8, height = 6, strand_plot, dpi= 500)
+```
+
+
+```{r}
+pd <- position_dodge(0.8)
+
+strand_plot <- strand_df %>% 
+  ggplot(aes(x=Run, y=Prct, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  facet_grid(.~cohort, scales = "free_x", space="free") +
+  scale_color_manual(values = color_panel)+
+  geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+ylab("% Strandedness")
+
+strand_plot
+```
+
+## Mapping percentage
+```{r}
+star_df <- read.csv(paste0(data_dir, "/prctStar.csv"), row.names = c(1))
+star_df <- star_df %>% dplyr::mutate("cohort" = ifelse(Run=="Cohort1", "Cohort1", "Cohort2"))
+
+star_plot_pro <- star_df  %>% dplyr::filter(Run!="Cohort1") %>% 
+  ggplot(aes(x=Run, y=uniquely_mapped_percent, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 1) +
+    scale_color_manual(values = color_panel)+
+     geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+ylab("% uniquely mapped")
+
+star_plot_retro <- star_df  %>% dplyr::filter(Run=="Cohort1") %>% 
+  ggplot(aes(x=Run, y=uniquely_mapped_percent, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 0.5) +
+    scale_color_manual(values = color_panel[2])+
+    geom_beeswarm(alpha=0.3, size = 0.1, dodge.width = 0.8, cex = 0.5) +
+    theme_bw() +
+ theme(axis.text.x=element_blank())+
+  theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+
+  ylab("% uniquely mapped")
+
+star_plot <- star_df %>% 
+  ggplot(aes(x=Run, y=uniquely_mapped_percent, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 0.5) +
+    scale_color_manual(values = color_panel)+
+    geom_beeswarm(alpha=0.3, size = 0.1, dodge.width = 0.8, cex = 0.5) +
+  facet_grid(.~cohort, scales = "free_x", space="free") +
+    theme_bw() +
+ theme(axis.text.x=element_blank())+
+  theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+
+  ylab("% uniquely mapped")
+
+star_plot
+star_plot_retro
+
+ggsave(paste0(data_dir, "./Figures/Star.png"), width = 8, height = 6, star_plot, dpi= 500)
+```
+
+## Duplication
+
+```{r}
+dedup_df <- read.csv((paste0(data_dir, "/dedup.csv")))
+dedup_df <- dedup_df %>% dplyr::mutate("cohort" = ifelse(Run=="Cohort1", "Cohort1", "Cohort2"))
+
+dedup_plot_pro <- dedup_df %>% dplyr::filter(Run!="Cohort1") %>% 
+  ggplot(aes(x=Run, y=prct_dedup, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 1) +
+    scale_color_manual(values = color_panel)+
+    geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+ylab("% reads after deduplication")
+
+dedup_plot_retro <- dedup_df %>% dplyr::filter(Run=="Cohort1") %>% 
+  ggplot(aes(x=Run, y=prct_dedup, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 0.5) +
+    scale_color_manual(values = color_panel[2])+
+    geom_beeswarm(alpha=0.3, size = 0.1, dodge.width = 0.8, cex = 0.5) +
+    theme_bw() + 
+  theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+ylab("% reads after deduplication")
+
+dedup_plot <- dedup_df %>% 
+  ggplot(aes(x=Run, y=prct_dedup, color=Run)) +
+    geom_boxplot(position = pd, outlier.size = 1) +
+  facet_grid(.~cohort, scales = "free_x", space="free") +
+    scale_color_manual(values = color_panel)+
+    geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+ylab("% reads after deduplication")
+
+
+dedup_plot_retro
+dedup_plot
+
+ggsave(paste0(data_dir, "./Figures/UmiDedup.png"), width = 8, height = 6, star_plot, dpi= 500)
+```
+
+## gene counts
+
+```{r}
+#getting gene annotation
+ensembl <- useEnsembl("ensembl",dataset="hsapiens_gene_ensembl", version = 109)
+genes_ens <- getBM(attributes=c('ensembl_gene_id','gene_biotype','chromosome_name'),mart=ensembl)
+
+genes_ens$gene_biotype[grep("pseudogene",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("TR",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("IG",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("TEC",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("^sc",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("ribozyme",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("miRNA",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("vault",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("misc_RNA",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("artifact",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("^s.*RNA$",genes_ens$gene_biotype)]<-"other"
+genes_ens$gene_biotype[grep("antisense_RNA",genes_ens$gene_biotype)]<-"lncRNA"
+genes_ens$gene_biotype[grep("lincRNA",genes_ens$gene_biotype)]<-"lncRNA"
+genes_ens$gene_biotype[grep("lncRNA",genes_ens$gene_biotype)]<-"lncRNA"
+genes_ens$gene_biotype[grep("overlapping",genes_ens$gene_biotype)]<-"lncRNA"
+genes_ens$gene_biotype[grep("^sense",genes_ens$gene_biotype)]<-"lncRNA"
+genes_ens$gene_biotype[grep("non_coding",genes_ens$gene_biotype)]<-"lncRNA"
+genes_ens$gene_biotype[grep("processed_transcript",genes_ens$gene_biotype)]<-"lncRNA"
+genes_ens$gene_biotype[grep("MT",genes_ens$chromosome_name)]<-"protein_coding"
+genes_ens$gene_biotype[grep("RNR",genes_ens$hgnc_symbol)]<-"rRNA"
+
+summary(as.factor(genes_ens$gene_biotype))
+```
+
+
+```{r}
+#loading count files cohort2
+htseq <- read_delim(paste0(data_dir, "/htseq_cohort2.txt"))
+
+htseq_genes_long <-  htseq %>% 
+  gather(., key='RNAID', value="est_counts", -ensembl_gene_id) %>% 
+  left_join(., genes_ens, by="ensembl_gene_id")
+
+genes_cutoff <- htseq_genes_long %>% filter(est_counts > 10) %>% filter(gene_biotype=="protein_coding")
+number_genes_detected <- genes_cutoff %>% group_by(RNAID) %>% dplyr::summarize(genes_above10=n())    
+number_genes_detected<- left_join(number_genes_detected, Nreads2[,c("RNAID", "Run")])
+
+#loading count files cohort1
+htseq_C1 <- read_delim(paste0(data_dir, "/htseq_cohort1.txt"))
+htseq_C1_genes_long <-  htseq_C1 %>% 
+  gather(., key='RNAID', value="est_counts", -ensembl_gene_id) %>% 
+  left_join(., genes_ens, by="ensembl_gene_id")
+
+genes_cutoff_C1 <- htseq_C1_genes_long %>% filter(est_counts > 10) %>% filter(gene_biotype=="protein_coding")
+number_genes_detected_C1 <- genes_cutoff_C1 %>% group_by(RNAID) %>% dplyr::summarize(genes_above10=n())    
+number_genes_detected_C1$Run<-"Cohort1"
+Ngenes_df <- rbind(number_genes_detected_C1, number_genes_detected)
+
+#write.csv(Ngenes_df, file = paste0(data_dir, "/Ngenes.csv"), row.names = F)
+```
+
+```{r}
+
+Ngenes_df<-read.csv(file = paste0(data_dir, "/Ngenes.csv"))
+Ngenes_df <- Ngenes_df %>% dplyr::mutate("cohort" = ifelse(Run=="Cohort1", "Cohort1", "Cohort2"))
+
+Ngenes_plot_pro <- Ngenes_df %>% dplyr::filter(Run!="Cohort1") %>% 
+  ggplot(aes(x=Run, y=genes_above10, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  scale_color_manual(values = color_panel)+
+  geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+
+  ylab("# genes counts > 10")
+
+Ngenes_plot_retro <- Ngenes_df %>% dplyr::filter(Run=="Cohort1") %>% 
+  ggplot(aes(x=Run, y=genes_above10, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 0.5) +
+  scale_color_manual(values = color_panel[2])+
+  geom_beeswarm(alpha=0.3, size = 0.1, dodge.width = 0.8, cex = 0.3) +
+  theme_bw() + theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+
+  ylab("# genes counts > 10")
+
+Ngenes_plot <- Ngenes_df %>% 
+  ggplot(aes(x=Run, y=genes_above10, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  facet_grid(.~cohort, scales = "free_x", space="free") +
+  scale_color_manual(values = color_panel)+
+  geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+
+  ylab("# genes counts > 10")
+
+
+Ngenes_plot
+Ngenes_plot_retro
+
+ggsave(paste0(data_dir, "./Figures/Ngenes.png"), width = 8, height = 6, Ngenes_plot, dpi= 500)
+
+
+```
+
+```{r}
+summary_stats <- Nreads1 %>%
+    group_by(Run) %>%
+    summarise(
+        mean = round(mean(trimmed, na.rm = TRUE)/1000000,2),
+        median = round(median(trimmed, na.rm = TRUE)/1000000,2),
+        max = round(max(trimmed, na.rm = TRUE)/1000000,2),
+        min = round(min(trimmed, na.rm = TRUE)/1000000,2),
+        sd = round(sd(trimmed, na.rm = TRUE)/1000000,2)
+
+    )
+```
+
+## Spike ratios
+
+```{r}
+Spikes_C1<- read.csv(paste0(data_dir, "/SpikeRatio_C1.csv"))
+Spikes_C2<- read.csv(paste0(data_dir, "/SpikeRatio_C2.csv"))
+Spikes_C2 <- left_join(Spikes_C2, Nreads2[,c("RNAID", "Run")])
+Spikes_df <- rbind(Spikes_C1, Spikes_C2) 
+Spikes_df <- Spikes_df %>% dplyr::mutate("cohort" = ifelse(Run=="Cohort1", "Cohort1", "Cohort2"))
+
+EndovsERCC_plot_retro <- ggplot(Spikes_df%>%filter(!ERCC==0&Run=="Cohort1"), aes(x=Run ,y=EndovsERCC, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 0.5) +
+  scale_color_manual(values = color_panel[2])+
+  scale_y_continuous(trans = "log10")+
+  geom_beeswarm(alpha=0.3, size = 0.1, dodge.width = 0.8, cex = 0.3) +
+  theme_bw() + theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+
+  ylab("Endogenous vs ERCC [log10]")
+
+EndovsERCC_plot_pro <- ggplot(Spikes_df%>%filter(!ERCC==0&Run!="Cohort1"), aes(x=Run ,y=EndovsERCC, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  scale_color_manual(values = color_panel)+
+  scale_y_continuous(trans = "log10")+
+ geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+
+  ylab("Endogenous vs ERCC [log10]")
+
+EndovsERCC_plot <- ggplot(Spikes_df%>%filter(!ERCC==0), aes(x=Run ,y=EndovsERCC, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  scale_color_manual(values = color_panel)+
+  scale_y_continuous(trans = "log10")+
+  facet_grid(.~cohort, scales = "free_x", space="free") +
+ geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+
+  ylab("Endogenous vs ERCC [log10]")
+
+EndovsSeq_plot_retro <- ggplot(Spikes_df%>%filter(!Sequin==0&Run=="Cohort1"), aes(x=Run ,y=EndovsSeq, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 0.5) +
+  scale_color_manual(values = color_panel[2])+
+  scale_y_continuous(trans = "log10")+
+  geom_beeswarm(alpha=0.3, size = 0.1, dodge.width = 0.8, cex = 0.3) +
+  theme_bw() + theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+
+  ylab("Endogenous vs Sequin [log10]")
+
+EndovsSeq_plot_pro <- ggplot(Spikes_df%>%filter(!Sequin==0&Run!="Cohort1"), aes(x=Run ,y=EndovsSeq, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  scale_color_manual(values = color_panel)+
+  scale_y_continuous(trans = "log10")+
+  geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+
+  ylab("Endogenous vs Sequin [log10]")
+
+EndovsSeq_plot <- ggplot(Spikes_df%>%filter(!Sequin==0), aes(x=Run ,y=EndovsSeq, color=Run)) +
+  geom_boxplot(position = pd, outlier.size = 1) +
+  scale_color_manual(values = color_panel)+
+  scale_y_continuous(trans = "log10")+
+  facet_grid(.~cohort, scales = "free_x", space="free") +
+  geom_beeswarm(alpha=0.3, size = 0.5, dodge.width = 0.8, cex = 0.3) +
+    theme_bw() +
+    theme(axis.text.x=element_blank(), axis.text.y=element_text(size=10),axis.title.x = element_blank(), axis.title.y = element_text(size=12))+
+  ylab("Endogenous vs Sequin [log10]")
+
+
+EndovsERCC_plot_retro
+EndovsERCC_plot_pro
+EndovsSeq_plot_retro
+EndovsSeq_plot_pro
+
+```
+
+```{r}
+colnames(ann_C1)
+```
+
+## QC at gene level
+
+```{r}
+
+require(DESeq2)
+require(readxl)
+
+ann_retro <- read_csv(paste0(data_dir, "/Suplementary_Table1.csv"))
+
+
+#making pheno data for cohort2
+pDat_C2 <- lab_ann[,c("SMAPLE_RNA","Subject_ID", "Hospital")] %>% merge(., Nreads2[c("RNAID", "Run")], by.x="SMAPLE_RNA", by.y="RNAID")  %>% 
+  column_to_rownames(var = "SMAPLE_RNA")
+
+pDat_C1 <- ann_retro[,c("SMAPLE_RNA","Subject_ID", "NAFLD_Diagnosis_AMC", "NASH_Atrisk_AMC")] %>% merge(., Nreads1[c("RNAID", "Run")], by.x="SMAPLE_RNA", by.y="RNAID")  %>% 
+  column_to_rownames(var = "SMAPLE_RNA") %>% filter(!is.na(NASH_Atrisk_AMC))
+
+
+#Formating count data
+htseq_C1<-htseq_C1 %>% column_to_rownames(var="ensembl_gene_id")
+htseq_C1 <- htseq_C1 %>% dplyr::select(rownames(pDat_C1))
+htseq_C2<-htseq %>% column_to_rownames(var="ensembl_gene_id")
+#creating deseq object
+dds_C1 <- DESeqDataSetFromMatrix(countData=htseq_C1, colData = pDat_C1, design=~1)
+dds_C2 <- DESeqDataSetFromMatrix(countData=htseq_C2, colData = pDat_C2, design=~1)
+#Calculating factor sizes
+dds_C1 <- DESeq(dds_C1)
+##Variance estabilization
+vsd_C1 <- vst(dds_C1, blind=FALSE)
+#Cohort 2
+dds_C2 <- DESeq(dds_C2)
+vsd_C2 <- vst(dds_C2, blind=FALSE)
+
+vsd_C1$NAFLD_Diagnosis_AMC<-as.factor(vsd_C1$NAFLD_Diagnosis_AMC)
+```
+
+```{r}
+#making pca plots C1
+#Run
+PCA_vsd_C1<-plotPCA(vsd_C1, intgroup=c("Run"), returnData=TRUE) 
+
+PCA_plot_C1 <- ggplot(PCA_vsd_C1, aes(PC1, PC2, color=Run)) +
+  geom_point(size=1) +
+  scale_color_manual(values = color_panel[2]) +theme_bw() + theme(axis.text.y=element_text(size=8), axis.title.y = element_text(size=12),axis.title.x = element_text(size=12))+
+  geom_text(data=PCA_vsd_C1[PCA_vsd_C1$PC2 > 60,], aes(label=rownames(PCA_vsd_C1[PCA_vsd_C1$PC2 > 60,])), size=2, vjust=2)
+
+PCA_plot_C1
+
+#NAFLD
+PCA_vsd_C1_2<-plotPCA(vsd_C1, intgroup=c("NASH_Atrisk_AMC"), returnData=TRUE) 
+
+PCA_plot_C1_2 <- ggplot(PCA_vsd_C1_2, aes(PC1, PC2, color=NASH_Atrisk_AMC)) +
+  geom_point(size=1) +
+  scale_color_manual(values = color_panel) +theme_bw() + theme(axis.text.y=element_text(size=8), axis.title.y = element_text(size=12),axis.title.x = element_text(size=12))+
+  geom_text(data=PCA_vsd_C1[PCA_vsd_C1$PC2 > 60,], aes(label=rownames(PCA_vsd_C1[PCA_vsd_C1$PC2 > 60,])), size=2, vjust=2)
+
+
+
+ggsave(paste0(data_dir, "/Figures/PCA_vst_C1.png"), plot=PCA_plot_C1, dpi = 300)
+
+
+#making pca plots C2
+PCA_vsd_C2<-plotPCA(vsd_C2, intgroup=c("Run"), returnData=TRUE)
+
+PCA_plot_C2 <- ggplot(PCA_vsd_C2, aes(PC1, PC2, color=Run)) +
+  geom_point(size=0.5) +
+  scale_color_manual(values = color_panel) + theme_bw() + theme(axis.text.y=element_text(size=8), axis.title.y = element_text(size=12),axis.title.x = element_text(size=12))+
+  geom_text(data=PCA_vsd_C2[abs(PCA_vsd_C2$PC2) > 30|abs(PCA_vsd_C2$PC1) > 40,], aes(label=rownames(PCA_vsd_C2[abs(PCA_vsd_C2$PC2) > 30|abs(PCA_vsd_C2$PC1) > 40,])), size=2, vjust=2)
+
+ggsave(paste0(data_dir, "/Figures/PCA_vst_C2.png"), plot=PCA_plot_C2, dpi = 300)
+PCA_plot_C2
+```
+
+
+
+```{r}
+full_htseq<- merge(htseq_C1, htseq_C2, by='row.names')
+full_htseq <- full_htseq %>% column_to_rownames(var = 'Row.names')
+pDat<-pDat %>% rownames_to_column(var="RNAID") 
+pDat_C1<-pDat_C1 %>% rownames_to_column(var="RNAID") 
+full_pdat <- rbind(pDat_C1[,c("RNAID","Run")], pDat[,c("RNAID", "Run")])
+full_pdat<-full_pdat %>% column_to_rownames(var = "RNAID")
+full_dds <- DESeqDataSetFromMatrix(countData=full_htseq, colData = full_pdat, design=~1)
+#Calculating factor sizes
+full_dds <- DESeq(full_dds)
+##Variance estabilization
+full_vsd <- vst(full_dds, blind=FALSE)
+#PCA
+full_PCA_vsd<-plotPCA(full_vsd, intgroup=c("Run"), returnData=TRUE) 
+#Plot
+PCA_plot_full <- ggplot(full_PCA_vsd, aes(PC1, PC2, color=Run)) +
+  geom_point(size=0.5)+ labs(title = "PCA Gene expression") +
+  scale_color_manual(values = color_panel) +theme_bw() + theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8), axis.title.y = element_text(size=8),axis.title.x = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 10))+
+  geom_text(data=full_PCA_vsd[full_PCA_vsd$PC2 > 60,], aes(label=rownames(full_PCA_vsd[full_PCA_vsd$PC2 > 60,])), size=2, vjust=2)
+PCA_plot_full
+```
+
+
+
+
+
+```{r}
+require(ggpubr)
+
+plt_list_pro <- list(reads_boxplot, strand_plot, star_plot,dedup_plot,Ngenes_plot, EndovsERCC_plot, EndovsSeq_plot, PCA_plot_C2)
+
+final_plot_pro <- ggarrange(plotlist = plt_list_pro, labels=c("A", "B", "C", "D", "E", "F", "G", "H"),
+                            font.label = list(size = 10, color = "black", face = "bold", family = NULL),
+                            common.legend = T, nrow = 4, ncol=2, legend = "bottom", align=c("hv") 
+                            )
+
+final_plot_pro 
+
+ggsave(paste0(data_dir, "/Figures/QCMetrics_ALL.pdf"), width = 12, height = 18, final_plot_pro, dpi= 500)
+```
+
+```{r}
+
+plt_list_retro <- list(reads_retro_boxplot, strand_plot_retro, star_plot_retro,dedup_plot_retro,Ngenes_plot_retro, EndovsERCC_plot_retro, EndovsSeq_plot_retro, PCA_plot_C1)
+
+final_plot_retro <- ggarrange(plotlist = plt_list_retro, labels=c("A", "B", "C", "D", "E", "F", "G", "H"),
+                            font.label = list(size = 10, color = "black", face = "bold", family = NULL),
+                            common.legend = T, nrow = 4, ncol=2, legend = "bottom", align=c("hv") 
+                            )
+
+#ggsave(paste0(data_dir, "/Figures/QCMetrics_C1.pdf"), width = 6, height = 9, final_plot_retro, dpi= 500)
+
+```
+

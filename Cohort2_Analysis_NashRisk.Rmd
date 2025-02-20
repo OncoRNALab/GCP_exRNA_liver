@@ -1,0 +1,636 @@
+---
+title: "NASH at Risk"
+author: "Franco Poma"
+date: "2024-04-04"
+output: html_document
+---
+
+# Setup 
+
+```{r setup}
+require(tidyverse)
+require(DESeq2)
+require(dplyr)
+require(readr)
+require(stringr)
+require(EnhancedVolcano)
+require(tibble)
+require(biomaRt)
+require(RColorBrewer)
+require(pheatmap)
+require(ggbeeswarm)
+require(rstatix)
+library(edgeR)
+require(ggbeeswarm)
+require(ggpubr)
+require(rstatix)
+require(viridis)
+require(msigdbr)
+#require(clusterProfiler)
+require(fgsea)
+require(Biobase)
+require(GSVAdata)
+require(GSVA)
+require(reshape2)
+library(readxl)
+
+if (rstudioapi::isAvailable()) {
+  setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+}
+
+library(conflicted)
+
+conflict_prefer("filter", "dplyr")
+conflict_prefer("desc", "dplyr")
+conflict_prefer("select", "dplyr")
+conflict_prefer("slice", "dplyr")
+conflict_prefer("rename", "dplyr")
+conflict_prefer('intersect', 'dplyr')
+conflict_prefer("count", "dplyr")
+
+color_panel<-c("#e35d6a","#428bca","darkgray","#e87810","#5bb75b", "#23496b","#ffbf00","#cc2028","#039748","pink","gray")
+data_dir <- "./Data"
+
+```
+
+
+# Make annotation only Nash subcohort 
+
+```{r, include=FALSE}
+#Load outliers
+outliers_df<-read.table(paste0(data_dir, "/OutliersC2.txt"), header = T) # set of 41 outliers.
+#Annotation
+ann<-read_tsv(paste0(data_dir, "/Annotation_Cohort2.tsv"))
+#Select only NASH cohort and baseline samples
+pDat_NASH<- ann %>% filter(str_detect(Cohort, "NASH"))
+pDat_NASH <- pDat_NASH %>% dplyr::filter(Visit_Type=="Baseline")
+
+#Removing NoNAFLD samples
+pDat_NASH <- pDat_NASH %>% dplyr::filter(NASH!="No NAFLD")
+colnames(pDat_NASH)[1]<-"RNAID"
+```
+```{r}
+baseline <- ann %>% filter(Visit_Type=="Baseline")
+FU <- ann %>% filter(Visit_Type=="FU")
+
+no_base<-base::setdiff(FU$Subject_ID, baseline$Subject_ID)
+
+ann_no_base<- ann %>% filter(ann$Subject_ID%in%no_base)
+count_table_filt <- htseq %>% dplyr::select(ann$SMAPLE_RNA)
+
+no_base
+
+samples <- colnames(htseq)
+
+htseq["RNA023251"]
+
+```
+
+```{r}
+
+```
+
+```{r, include=FALSE}
+#remove outliers (actually outliers were already removed)
+pDat_NASH<-pDat_NASH %>% dplyr::filter(!RNAID%in%outliers_df$RNAID)
+summary(as.factor(pDat_NASH$NASH))
+```
+
+# Load counts
+
+```{r, warning=FALSE, message=FALSE}
+htseq <- read_delim(paste0(data_dir, "/htseq_cohort2.txt"))
+#remove ambiguous, not unique, no feature
+htseq <- htseq %>% filter(!str_detect(ensembl_gene_id, "^__"))
+#Select only Nash cohort counts
+htseq <- htseq  %>%
+  column_to_rownames("ensembl_gene_id")
+
+count_table_NASH <- htseq %>% dplyr::select(pDat_NASH$RNAID)
+
+count_table_NASH <- count_table_NASH  %>%
+  rownames_to_column("ensembl_gene_id")
+
+
+#Get sum of sequin counts
+Seq_counts <- filter(count_table_NASH, str_detect(ensembl_gene_id,"R1|R2")) %>% summarize_if(is.numeric, sum)
+
+#remove spikes from data
+count_table_NASH_noSpike <- count_table_NASH %>% filter(ensembl_gene_id %in% grep("^R|^ERCC", count_table_NASH$ensembl_gene_id, invert=T,value=T))
+
+#write.table(count_table_NASH_noSpike, file=paste0(output_path,"rawCounts_NashRisk.txt"), row.names = F, sep = "\t", quote=F)
+count_table_NASH_noSpike <- count_table_NASH_noSpike  %>%
+  column_to_rownames("ensembl_gene_id")
+#phenp data filtered
+pDat_NASH <- pDat_NASH %>% column_to_rownames(var='RNAID')
+
+#New varaible NASH_risk
+pDat_NASH <- pDat_NASH %>%  mutate("Risk" = as.factor(if_else(pDat_NASH$NASH=="NASH"&pDat_NASH$Fibrosis%in%c("F2","F3", "F4", "F5", "F6"), "Risk", "No_Risk")))
+
+summary(as.factor(pDat_NASH$Risk))
+```
+
+
+
+### Model 1 
+
+- Keep genes which counts > 300 across samples
+- Model design = ~Nash
+- Sequin normalization
+
+
+```{r, include=FALSE, message=FALSE, warning=FALSE}
+ensembl <- useEnsembl(biomart="ensembl", dataset="hsapiens_gene_ensembl", version=108)
+genes_ens1 <- getBM(attributes=c('ensembl_gene_id','hgnc_symbol', 'entrezgene_id', 'gene_biotype'),mart=ensembl)
+pDat_NASH_filt<-pDat_NASH[!is.na(pDat_NASH$Fibrosis),]
+Seq_counts_select <- dplyr::select(Seq_counts, row.names(pDat_NASH_filt))
+count_table <- count_table_NASH_noSpike %>%  dplyr::select(rownames(pDat_NASH_filt))
+
+dds_spike <- DESeqDataSetFromMatrix(countData=count_table, colData = pDat_NASH_filt, design= ~ Risk + Sex)
+keep <- rowSums(counts(dds_spike)) >= 300
+dds_spike <- dds_spike[keep,]
+sizeFactors(dds_spike) <- estimateSizeFactorsForMatrix(Seq_counts_select)
+dds_spike <- DESeq(dds_spike)
+
+##Variance estabilization
+# vsd <- vst(dds_spike, blind=FALSE)
+# counts_vsd<- as.data.frame(t(assay(vsd)))
+# counts_vsd <- counts_vsd %>% rownames_to_column(var="sample")
+# pdat<- pDat_NASH_filt %>% rownames_to_column(var="sample") %>% dplyr::select(c("sample", "Risk"))
+# counts_vsd_2 <- merge(counts_vsd, pdat, by="sample", all.x=T)
+# counts_vsd_2 <- counts_vsd_2 %>% column_to_rownames(var="sample")
+# write_csv(counts_vsd_2, file = paste0(data_dir,"NashRiskVSDCounts.csv"))
+```
+
+```{r}
+#saving normalized counts for feature selection
+norm_counts <- as.data.frame(t(counts(dds_spike, normalized =T))) 
+norm_counts <- norm_counts %>% rownames_to_column(var="sample")
+pdat<- pDat_NASH_filt %>% rownames_to_column(var="sample") %>% dplyr::select(c("sample", "Risk"))
+norm_counts2 <- merge(norm_counts, pdat, by="sample", all.x=T)
+norm_counts2 <- norm_counts2 %>% column_to_rownames(var="sample")
+# write_csv(norm_counts2, file = paste0(data_dir,"NashRiskNormCountsC2.csv"))
+
+#saving filtered counts for deconvolution analaysis
+
+counts_filt<- as.data.frame(counts(dds_spike, normalized =F))
+counts_filt1<- counts_filt %>% rownames_to_column(var='ensembl_gene_id')
+#rownames(counts_filt)<-NULL
+counts_filt1 <- left_join(counts_filt1, genes_ens1, by="ensembl_gene_id", multiple='any') %>% dplyr::select(!c("ensembl_gene_id", "entrezgene_id", "gene_biotype")) 
+counts_filt1 <- counts_filt1 %>% dplyr::filter(!is.na(counts_filt1$hgnc_symbol))
+counts_filt1 <- counts_filt1 %>% dplyr::filter(!counts_filt1$hgnc_symbol=="")
+new_order <- c("hgnc_symbol", colnames(counts_filt1[1:172]))
+counts_filt1<-counts_filt1[,new_order]
+write.csv(counts_filt1, file = paste0(data_dir, "RawFilt300_NashRisk.csv"), row.names = F)
+## Make CPM counts for cell type deconvolution
+#load raw counts
+counts <- read.csv(paste0(data_dir,"RawFilt300_NashRisk.csv"))
+#convert to CPM matrix using edgeR for deconvolution
+count_matrix<-counts %>% column_to_rownames(var='hgnc_symbol') %>% as.matrix(.)
+dge <- DGEList(counts = count_matrix, samples = pDat_NASH_filt)
+cpm_matrix <- as.data.frame(cpm(dge, log = F))
+cpm_matrix<-cpm_matrix %>% rownames_to_column(var="hgnc_symbol")
+write_csv(cpm_matrix, file = paste0(data_dir,"CPMFilt300_NashRisk.csv")) 
+```
+
+
+
+```{r}
+res_spike <- results(dds_spike, contrast = c("Risk", "Risk", "No_Risk"), alpha = 0.05)
+
+resOrdered <- as.data.frame(res_spike) %>%
+  rownames_to_column(var = "ensembl_geneID") %>%
+  dplyr::arrange(desc(abs(log2FoldChange))) 
+
+sig_genes_M1 <- as.data.frame(subset(res_spike, padj < 0.05 & abs(log2FoldChange) > 1))
+
+# write.table(resOrdered,file=paste0(data_dir ,"Genes_HospSexRISK_sequin_C2.txt"), row.names = F, sep = "\t", quote=F)
+#resOrdered <- read.table(paste0(data_dir ,"Genes_HospSexRISK_sequin_C2.txt"), header = T)
+
+sig_genes_M1_symbol <- sig_genes_M1 %>% rownames_to_column(var='ensembl_gene_id')
+sig_genes_M1_symbol <- left_join(sig_genes_M1_symbol , genes_ens1, by="ensembl_gene_id", multiple='any')
+
+#write.table(sig_genes_M1_symbol,file=paste0(data_dir ,"DEG_SexRISK_sequin_C2.txt"), row.names = F, sep = "\t", quote=F)
+#write.table(sig_genes_M1_symbol,file=paste0(data_dir ,"DEG_SexRISK_sequin_C2.txt"), row.names = F, sep = "\t", quote=F)
+#write_excel_csv(sig_genes_M1_symbol,file=paste0(data_dir ,"DEG_SexRISK_sequin_C2.csv"))
+resOrdered_symbol <- left_join(resOrdered , genes_ens1, by=c("ensembl_geneID"="ensembl_gene_id"))
+head(resOrdered)
+```
+
+```{r, echo=FALSE}
+
+
+ev1 <- EnhancedVolcano(res_spike, lab= "",
+                      title = 'Risk of Progression', titleLabSize = 10,
+                      subtitle = "Risk vs No Risk", subtitleLabSize = 8,
+                      x= "log2FoldChange", y="padj",
+                      xlab = bquote(~Log[2]~ 'fold change'),
+                      ylab = bquote(~-Log[10]~adjusted~italic(P)),
+                      caption = bquote(~Log[2]~ "fold change cutoff: 1; p-value cutoff: 0.05"), captionLabSize = 7,
+                      axisLabSize = 8,
+                      pCutoff = 0.05, FCcutoff = 1.0,
+                      pointSize = 1,
+                      #legend=c('NS','FC>2','p-adj<0.05', 'p-adj<0.05 & FC>2'),
+                      colAlpha = 0.8,
+                      gridlines.major = F, gridlines.minor = F,
+                      xlim=c(-2,2), ylim=c(0,4),
+                      col=c('darkgray', "#5bb75b", "#428bca", "#e35d6a"),
+                      legendPosition = 'bottom',legendLabSize = 7,
+                      drawConnectors = TRUE,
+                      widthConnectors = 0.3,
+                      colConnectors = 'black',
+                      arrowheads = F)
+
+
+ev1
+ggsave(paste0(data_dir, "/Figures/Genes_SexRisk_sequin_C2.pdf"), ev1, dpi = 500)
+```
+
+## Cell of origin Deconvolution
+
+```{r}
+counts <- read.csv(paste0(data_dir,"/RawFilt300_NashRisk_ens.csv"), row.names = 1)
+counts <- counts %>% dplyr::select(rownames(pDat_NASH_filt)) %>% as.matrix()
+dge <- DGEList(counts = counts, samples = pDat_NASH_filt)
+#Convert to TMM for cell-type signature analysis
+dge_tmm <- calcNormFactors(dge, method = "TMM")
+#Now lets extract the CPM counts if calNorm on CPM and raw counts are the same
+CpmTmm_matrix<-as.data.frame(cpm(dge_tmm, log = F))
+#Load liver signature df
+liver_genes <- read.csv("./Deconv/gini6_perCluster_liver_12102020.csv", row.names = 1)
+hep_genes <- rownames(liver_genes[!is.na(liver_genes$Hepatocytes.gini),])
+#get counts of only hepatocyte genes
+hep_counts<-CpmTmm_matrix %>% dplyr::filter(rownames(CpmTmm_matrix)%in%hep_genes)
+#Log transformation
+log_cts <- log(CpmTmm_matrix+1)
+#select only hepatocyte genes
+log_hep_genes <- log_cts %>% filter(rownames(log_cts)%in%hep_genes)
+#Get the sum of log transfromed CPMTMM per samples
+Sum_log_hep<- as.data.frame(colSums(log_hep_genes)) #%>%  rownames_to_column(var="RNAID")
+Sum_log_hep<- Sum_log_hep %>% merge(., pDat_NASH_filt, by='row.names')
+colnames(Sum_log_hep)[2]<-'Score'
+
+stat.test <- Sum_log_hep %>%
+  rstatix::wilcox_test(Score~Risk, paired = F) %>%
+  add_significance()
+
+stat.test
+
+stat.test <- stat.test %>% add_y_position()
+#stat.test$y.position<-c(-0.05)#change to a better location
+
+Nash_risk_plt1 <- Sum_log_hep %>% ggplot(aes(x=Risk, y=Score)) + 
+  geom_boxplot(aes(color=Risk)) +
+  geom_beeswarm(alpha=0.5, dodge.width = 1, cex=0.9, size=0.1)+
+  stat_pvalue_manual(stat.test, hide.ns = F,label = "{p.signif}")+
+  theme_bw()+ theme(plot.title = element_text(hjust = 0.5), legend.position = "none", axis.title.x=element_blank(), axis.title.y=element_blank())+scale_color_manual(values=c("#428bca", "#e35d6a")) 
+
+Nash_risk_plt1
+ggsave(paste0(data_dir,"Figures/HepSign_boxplot.pdf"), Nash_risk_plt1, dpi=300)
+```
+### Hepatocyte Signature score: with singscore package 
+
+```{r}
+require(singscore)
+
+#sig_upgenes <- data.frame(hgnc_symbol=c('CD24',)) 
+
+eranks = rankGenes(CpmTmm_matrix)
+epi_score = simpleScore(eranks, hep_genes)
+```
+
+```{r}
+sig_tmp <- epi_score %>% rownames_to_column(var="RNAID") %>% merge(., pDat_NASH_filt, by.x="RNAID", by.y='row.names')
+
+stat.test <- sig_tmp %>%
+  rstatix::wilcox_test(TotalScore~Risk, paired = F) %>%
+  add_significance()
+
+stat.test
+
+stat.test <- stat.test %>% add_y_position()
+stat.test$y.position<-c(-0.05)#change to a better location
+
+Nash_risk_plt3 <- sig_tmp %>% ggplot(aes(x=Risk, y=TotalScore)) + 
+  geom_boxplot(aes(color=Risk)) +
+  #geom_point(aes(size=0.01))+
+  geom_beeswarm(alpha=0.5, dodge.width = 1, cex=0.9, size=0.1)+
+  stat_pvalue_manual(stat.test, hide.ns = F,label = "{p.signif}")+ theme_bw()+ theme(plot.title = element_text(hjust = 0.5), legend.position = "none", axis.title.x=element_blank(), axis.title.y=element_blank())+scale_color_manual(values=c("#428bca", "#e35d6a"))
+
+Nash_risk_plt3
+
+ggsave(paste0(data_dir,"Figures/Singscore_HepSignal_Riskboxplot.pdf"), Nash_risk_plt3, dpi=300)
+```
+
+```{r}
+"Risk of progression"
+
+signature_plot<- ggarrange(Nash_risk_plt1, Nash_risk_plt3, labels = c("A ", "B "), 
+                           font.label = list(size = 10, color = "black", face = "bold", family = NULL),
+                           align=c("h"), label.x = c(-0.02, -0.001), label.y = c(1, 1)  
+                           )
+
+signature_plot
+ann_sign_plt<-annotate_figure(signature_plot, bottom = "risk of progression", left = "signature score")
+
+ggsave(paste0(data_dir,"Figures/HepSignal_Risk_boxplots.pdf"), ann_sign_plt, dpi=500)
+```
+
+
+# Feature selection results
+
+```{r}
+#load feat selection results
+feat_sel_vsd <- read_csv(paste0(data_dir, "vsdLassoOut_all.csv"))
+feat_sel_vsd <- left_join(feat_sel_vsd, genes_ens1, by="ensembl_gene_id")
+
+length(intersect(feat_sel_vsd$ensembl_gene_id, feat_sel_vsd2$ensembl_gene_id))
+
+```
+
+
+```{r}
+#load sets from papers
+# Sets from Divya Ramnath paper
+set_LivFib <- c(
+"EFEMP1","CFTR","LUM","PLCXD3","THBS2","LTBP2","CD24","AEBP1","DTNA","VWF","LAMA2","VCAN","MMP2","KRT7","Spp1","NFASC","COL1A2","MAP1B","PDGERA","COL5A1","COL1A1","SLC12A2",'JAG1','IL7R','FAT1','FBN1','ITGAV','ANXA2','GUCY1A3','SLC6A6','CLEC4M','MAML2','LAMB1','CAPN2','ABCC4','MYO5A','ECN2','MT1E','PPP1R1A','MT1M','IGFALS','TTC36','CYBRD1','OSMR','CRIM1','PODN','MUC6','PLXDC2')
+
+
+steatosis_set <- c(
+'FSTL1',
+'VWF',
+'CRIM1',
+'SPRY1',
+'MAP1B',
+'AQP1',
+'FRAS1',
+'ADAMTS1',
+'PLXDC2',
+'COL1A2'
+)
+
+#from meta analysis paper
+report_genes <- read_xls("./Resources/41598_2017_10930_MOESM2_ESM.xls", sheet = "Agreement_with_nonparam", skip=2)
+
+lncRNA_NASH <- c("NEAT1",
+"MEG3",
+"MALATI",
+"ENST00000413567",
+"ENST00000413567",
+"ENST00000548691",
+"uc001gvp.1",
+"TCONS_00025733",
+"uc.372",
+"uc.94",
+"uc.157",
+"B4GALT1-ASI",
+"IncARSR",
+"RP11-279F6.1",
+"AC004540.4",
+"uc.333",
+"CCATI",
+"RABGAPILDT-206",
+"lnc-SPARCLI-1:2",
+"lnc PVT1",
+"lnc HCG18",
+"LINC00240",
+"has_circ_0046367",
+"circRNA_0001805",
+"APOA4-AS",
+"NEAT1",
+"RP11-484N16.1",
+"MEG3",
+"lncTNF",
+"MALAT1",
+"lnc18q22.2",
+"NEAT1",
+"MEG3",
+"MALAT1",
+"MEG3",
+"HULC",
+"circRNA SCAR",
+"GAS5",
+"MALATI",
+"lncPRYP4-3",
+"lncPRYP4-4",
+"LeXis",
+"hsa_circ_0089763",
+"H19",
+"RP11-128N14.5",
+"hsa_circ_0008882",
+"TGFB2/TGFB2-",
+"TGFB2/TGFB2-OTI hsa_circ_0008882",
+"OTI",
+"lncPRYP4-3",
+"hsa_circ 0022430",
+"lnc-SPARCL1-1:2",
+"lnc-SPARCL1-1:2",
+"hsa_circ_0032777",
+"RABGAPILDT-206",
+"hsa_circ_0141729",
+"206",
+"lncPRYP4-3",
+"hsa_circ_0001311",
+"HULC",
+"MAPKAPK5-ASI",
+"hsa_circ_0045989",
+"LINC01638",
+"XLOC_003146",
+"RP11_20J153",
+"HCC",
+"LncRNA FTX",
+"lncRNA SNHG20")
+
+```
+
+
+```{r}
+#check if the genes are in the published sets.
+sig_genes_M1_symbol<- sig_genes_M1_symbol %>% mutate(Reported = case_when(hgnc_symbol %in% set_LivFib ~ "Fibrosis",
+                                                                          hgnc_symbol %in% report_genes$GeneSymbol ~ "Liver_disease",
+                                                                          hgnc_symbol %in% steatosis_set ~ "Steatosis"))
+                                                                           
+
+feat_sel_vsd<- feat_sel_vsd %>% mutate(Reported = case_when(hgnc_symbol %in% set_LivFib ~ "Fibrosis",
+                                                                          hgnc_symbol %in% report_genes$GeneSymbol ~ "Liver_disease",
+                                                                          hgnc_symbol %in% steatosis_set ~ "Steatosis"))
+
+
+
+write_excel_csv(sig_genes_M1_symbol,file=paste0(data_dir ,"DEG_SexRISK_sequin_C2.csv"))
+write_excel_csv(feat_sel_vsd,file=paste0(data_dir ,"FeatSel_SexRISK_vsd_C2.csv"))
+
+```
+
+
+# GSEA
+
+## Hallmark
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(msigdbr)
+H <- as.data.frame(msigdbr(species = "Homo sapiens", 
+                           category = "H"))
+
+###Formatting the database###
+H.ensembl.ls <- H %>% 
+  #Keep gene ID that match expression data gene ID
+  dplyr::select(gs_name, ensembl_gene) %>% 
+  #Collapse all genes in each gene set into 1 row each
+  group_by(gs_name) %>%
+  summarise(all.genes = list(unique(ensembl_gene))) %>%
+  #Convert to list
+  deframe()
+```
+
+```{r}
+###`fgsea` requires our fold changes to be in a decreasing, named vector (or list of vectors if you have multiple groups). So we format as a vector for our one group of TB-MEDIA fold changes.###
+#Vector of mean fold change values
+FC.vec <- resOrdered$log2FoldChange
+#Add names
+#Importantly, since both columns come from the same data frame,
+#we are confident that they are in the same order
+names(FC.vec) <- resOrdered$ensembl_geneID
+```
+
+```{r}
+#GSEA calculates significance differently if you have only positive (`pos`), only negative (`neg`), or mixed (`std`) fold change values. This is analogous to a one- vs two-tailed t-test. 
+
+#We can set this by-hand by checking our minimum and maximum fold changes. We see we have positive and negative, thus our type is `std`.
+
+#code to select the score type
+if(min(FC.vec) < 0 & max(FC.vec) > 0){
+        scoreType <- "std"
+      } else if(max(FC.vec) <= 0){
+        scoreType <- "neg"
+      } else if(min(FC.vec) >= 0){
+        scoreType <- "pos"
+      } else{
+        stop("Could not determine score type from fold changes.")
+      }
+```
+
+
+```{r}
+#GSEA
+library(fgsea)
+
+fgseaRes <- fgsea(pathways = H.ensembl.ls, 
+                  stats    = FC.vec,
+                  eps      = 0.0,
+                  minSize  = 15,
+                  maxSize  = 500)
+
+tmp_df <-as.data.frame(fgseaRes[order(pval), ])
+tmp_df2<-tmp_df %>% dplyr::filter(pval<0.01)
+
+head(fgseaRes[order(padj), ],10)
+
+write.table(tmp_df2[,-8], file=paste0(data_dir ,"Hallmark_RiskOnlyNash_sequin_C2.txt"), row.names = F, sep = "\t", quote=F)
+```
+
+```{r}
+tmp_hallmark<-read.table(paste0(data_dir ,"Hallmark_RiskOnlyNash_sequin_C2.txt"), header = T)
+
+plt_H<- ggplot(tmp_hallmark, aes(y = reorder(pathway, NES), x = NES, size = size, color = NES)) +
+  geom_point() +
+  theme_minimal() +
+  scale_color_gradient(low = "blue", high = "red") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey") +
+  labs(title = "Top Enriched Pathways",
+       x = "Normalized Enrichment Score (NES)",
+       y = "Pathway",
+       size = "Gene Set Size",
+       color = "NES") +
+  theme(axis.text.y = element_text(angle = 0, hjust = 1))
+
+
+ggsave(paste0(data_dir,"Figures/Hallmark_NashRisk_all.pdf"), plt_H, dpi=500, width = 10)
+```
+
+## GO
+```{r}
+###Formatting the database###
+#GO database
+GO <- as.data.frame(msigdbr(species = "Homo sapiens", 
+                           category = "C5"))
+GO.ensembl.ls <- GO %>% 
+  #Keep gene ID that match expression data gene ID
+  dplyr::select(gs_name, ensembl_gene) %>% 
+  #Collapse all genes in each gene set into 1 row each
+  group_by(gs_name) %>%
+  summarise(all.genes = list(unique(ensembl_gene))) %>%
+  #Convert to list
+  deframe()
+```
+
+```{r}
+fgseaRes.GO <- fgsea(pathways = GO.ensembl.ls, 
+                  stats    = FC.vec,
+                  eps      = 0.0,
+                  minSize  = 15,
+                  maxSize  = 500)
+head(fgseaRes.GO[order(pval), ],10)
+```
+
+```{r}
+#Collapsing similar pathways
+collapsedPathways <- collapsePathways(fgseaRes.GO[order(pval)][padj < 0.01], 
+                                      GO.ensembl.ls, FC.vec)
+
+mainPathways <- fgseaRes.GO[pathway %in% collapsedPathways$mainPathways][
+                         order(-NES), pathway]
+GO.ensembl.ls[mainPathways]
+GOtmp<-fgseaRes.GO[fgseaRes.GO$pathway%in%mainPathways,]
+```
+
+```{r}
+tmp_df <-GOtmp %>%filter(padj <= 0.01 & abs(NES)>2)
+tmp_df2 <-GOtmp %>%filter(padj <= 0.01)
+tmp_df[order(NES), ]
+
+write.table(GOtmp%>%filter(padj <= 0.01& abs(NES)>2) %>% dplyr::select(!leadingEdge), file=paste0(data_dir,"GO_RiskOnlyNash_sequin_C2.txt"), row.names = F, sep = "\t", quote=F)
+```
+
+```{r}
+
+plt_GO<- ggplot(tmp_df2, aes(y = reorder(pathway, NES), x = NES, size = size, color = NES)) +
+  geom_point() +
+  theme_minimal() +
+  scale_color_gradient(low = "blue", high = "red") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey") +
+  labs(title = "Top Enriched Pathways",
+       x = "Normalized Enrichment Score (NES)",
+       y = "Pathway",
+       size = "Gene Set Size",
+       color = "NES") +
+  theme(axis.text.y = element_text(angle = 0, hjust = 1))
+
+
+ggsave(paste0(data_dir,"Figures/GO_NashRisk_all.pdf"), plt_GO, dpi=500, width = 10)
+```
+
+
+```{r}
+GO_tmp <-tmp_df[,-c(8)] %>% mutate(database = c(rep("GO", 25)))
+tmp_hallmark<-tmp_hallmark %>% mutate(database = c(rep("Hallmark", 6)))
+
+H_GO <- rbind(tmp_hallmark, GO_tmp)
+
+
+plt_H_GO2<- ggplot(H_GO, aes(y = reorder(pathway, NES), x = NES, size = size, color = NES)) +
+  geom_point() +
+  theme_minimal() +
+  scale_color_gradient(low = "#428bca", high = "#e35d6a") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "grey") +
+  facet_grid(database~., scales = "free_y", space="free") +
+  labs(title = "Top Enriched Pathways",
+       x = "Normalized Enrichment Score (NES)",
+       y = "Pathway",
+       size = "Gene Set Size",
+       color = "NES") +
+  theme(axis.text.y = element_text(angle = 0, hjust = 1))
+
+ggsave(paste0(data_dir,"Figures/GSEA_NashRisk.pdf"), plt_H_GO2, dpi=500, width = 10)
+```
+
