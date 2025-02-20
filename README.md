@@ -6,6 +6,18 @@
 
 ### Description
 
+The repository is structured as follows:
+
+```
+.
+├── CircRNA           # supplementary data needed to run circRNA analysis
+├── DATA              # supplementary data needed to run total RNA analysis: Diff. Abundance, GSEA 
+├── Deconv            # supplementary data needed to run Deconvolution analysis
+├── Figures           # Output figures from all the analyses 
+
+```
+**Scripts**
+
 - **QC_plots.Rmd** - script to do QC-metric analysis and reproduce QC-metrics box plots
 
 - **Z_scores.Rmd** - script to calculate z scores for each QC-metric to identify outliers  
