@@ -118,6 +118,7 @@ spikes_df_C2 <- spikes_df_C2_raw[is.finite(spikes_df_C2_raw$EndovsERCC),]%>%muta
 Sequin_df_C1 <- spikes_df_C1%>%mutate(Z_score = (EndovsSeq - mean(EndovsSeq, na.rm=T))/sd(EndovsSeq, na.rm=T))
 Sequin_df_C2 <- spikes_df_C2%>%mutate(Z_score = (EndovsSeq - mean(EndovsSeq, na.rm=T))/sd(EndovsSeq, na.rm=T))
 
+
 ```
 
 ```{r}

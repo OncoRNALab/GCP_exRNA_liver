@@ -332,6 +332,11 @@ summary_stats <- Nreads1 %>%
 ## Spike ratios
 
 ```{r}
+Spikes_C1 %>%dplyr::filter(EndovsERCC!=Inf) %>%  dplyr::group_by(Run) %>% summarise(mean=mean(EndovsERCC, na.rm=T), median=median(EndovsERCC, na.rm=T), max=max(EndovsERCC, na.rm=T), min=min(EndovsERCC, na.rm=T), sd= sd(EndovsERCC, na.rm=T))
+```
+
+```{r}
+
 Spikes_C1<- read.csv(paste0(data_dir, "/SpikeRatio_C1.csv"))
 Spikes_C2<- read.csv(paste0(data_dir, "/SpikeRatio_C2.csv"))
 Spikes_C2 <- left_join(Spikes_C2, Nreads2[,c("RNAID", "Run")])
