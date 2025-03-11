@@ -38,7 +38,7 @@ theme_boxplot<-theme_classic()+theme(axis.text.x = element_text(angle=90, vjust=
 
 data_dir <- "./Data/"
 #annotation
-ann_retro<-read_csv(paste0(data_dir,"annotation_Cohort1.csv"))
+ann_retro<-read_csv(paste0(data_dir,"Suplementary_Table1.csv"))
 ```
 
 
@@ -47,7 +47,7 @@ ann_retro<-read_csv(paste0(data_dir,"annotation_Cohort1.csv"))
 #getting gene annotation
 ensembl <- useEnsembl("ensembl",dataset="hsapiens_gene_ensembl", version = 109)
 genes_ens <- getBM(attributes=c('ensembl_gene_id','gene_biotype','chromosome_name'),mart=ensembl)
-htseq_C1 <- read_delim(paste0(data_dir, "/htseq_cohort1.txt"))
+htseq_C1 <- read_delim(paste0(data_dir, "counts/htseq_cohort1.txt"))
 htseq <- htseq_C1 %>% filter(!str_detect(ensembl_gene_id, "^__"))
 
 htseq <- htseq  %>%
@@ -112,7 +112,7 @@ resOrdered2 <- as.data.frame(res_spike2) %>%
 sig_genes_M2 <- as.data.frame(subset(res_spike2, padj < 0.01 & abs(log2FoldChange) > 2))
 
 #Write results
-write.table(resOrdered2,file=paste0(data_dir ,"Genes_SexCirrhosis_sequin_C1.txt"), row.names = F, sep = "\t", quote=F)
+#write.table(resOrdered2,file=paste0(data_dir ,"Genes_SexCirrhosis_sequin_C1.txt"), row.names = F, sep = "\t", quote=F)
 
 #addd gene symbols to the data
 genes_ens1 <- getBM(attributes=c('ensembl_gene_id','hgnc_symbol', 'entrezgene_id', 'gene_biotype'),mart=ensembl)

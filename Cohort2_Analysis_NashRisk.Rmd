@@ -69,29 +69,10 @@ pDat_NASH <- pDat_NASH %>% dplyr::filter(Visit_Type=="Baseline")
 pDat_NASH <- pDat_NASH %>% dplyr::filter(NASH!="No NAFLD")
 colnames(pDat_NASH)[1]<-"RNAID"
 ```
-```{r}
-baseline <- ann %>% filter(Visit_Type=="Baseline")
-FU <- ann %>% filter(Visit_Type=="FU")
 
-no_base<-base::setdiff(FU$Subject_ID, baseline$Subject_ID)
-
-ann_no_base<- ann %>% filter(ann$Subject_ID%in%no_base)
-count_table_filt <- htseq %>% dplyr::select(ann$SMAPLE_RNA)
-
-no_base
-
-samples <- colnames(htseq)
-
-htseq["RNA023251"]
-
-```
-
-```{r}
-
-```
 
 ```{r, include=FALSE}
-#remove outliers (actually outliers were already removed)
+#remove outliers (check if outliers were already removed)
 pDat_NASH<-pDat_NASH %>% dplyr::filter(!RNAID%in%outliers_df$RNAID)
 summary(as.factor(pDat_NASH$NASH))
 ```
@@ -99,7 +80,7 @@ summary(as.factor(pDat_NASH$NASH))
 # Load counts
 
 ```{r, warning=FALSE, message=FALSE}
-htseq <- read_delim(paste0(data_dir, "/htseq_cohort2.txt"))
+htseq <- read_delim(paste0(data_dir, "/counts/htseq_spikes_C2.txt"))
 #remove ambiguous, not unique, no feature
 htseq <- htseq %>% filter(!str_detect(ensembl_gene_id, "^__"))
 #Select only Nash cohort counts
