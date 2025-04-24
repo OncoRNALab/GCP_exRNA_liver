@@ -11,16 +11,16 @@ output: html_document
 library(dplyr)
 require(readr)
 library(DT)
-data_dir <- "./Data"
+data_dir <- "./Data/"
 ```
 
 # Make annotation only Nash subcohort
 
 ```{r, include=FALSE}
 #Load outliers
-outliers_df<-read.table(paste0(data_dir, "/OutliersC2.txt"), header = T) # set of 41 outliers.
+outliers_df<-read.table(paste0(data_dir, "OutliersC2.txt"), header = T) # set of 41 outliers.
 #Annotation
-ann<-read_tsv(paste0(data_dir, "/Annotation_Cohort2.tsv"))
+ann<-read_csv(paste0(data_dir, "Suplementary_Table2.csv"))
 #Select only NASH cohort and baseline samples
 pDat_NASH<- ann %>% filter(str_detect(Cohort, "NASH"))
 pDat_NASH <- pDat_NASH %>% dplyr::filter(Visit_Type=="Baseline")
@@ -109,7 +109,7 @@ Top_Spike <- as.data.frame(t(Top_Spike))
 Top_Spike <- Top_Spike %>% rownames_to_column(var="RNAID")
 
 # Load spike counts and merge
-Spikes_C2<- read.csv(paste0(data_dir, "/SpikeRatio_C2.csv"))
+Spikes_C2<- read.csv(paste0(data_dir, "SpikeRatio_C2.csv"))
 
 
 Top_Spike <- left_join(Top_Spike, Spikes_C2)

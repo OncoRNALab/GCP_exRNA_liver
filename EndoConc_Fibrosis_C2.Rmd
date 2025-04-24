@@ -17,16 +17,16 @@ library(stringr)
 require(ggbeeswarm)
 color_panel<-c("#e35d6a","#428bca","darkgray","#e87810","#5bb75b", "#23496b","#ffbf00","#cc2028","#039748","pink","gray")
 theme_final<- theme(axis.text.x=element_blank(), axis.text.y=element_text(size=8),axis.title.x = element_blank(), axis.title.y = element_text(size=8),plot.title = element_text(hjust = 0.5, size = 8))
-data_dir <- "./Data"
+data_dir <- "./Data/"
 ```
 
 # Make annotation only Nash subcohort
 
 ```{r, warning=FALSE, message=FALSE}
 #Load outliers
-outliers_df<-read.table(paste0(data_dir, "/OutliersC2.txt"), header = T) # set of 41 outliers.
+outliers_df<-read.table(paste0(data_dir, "OutliersC2.txt"), header = T) # set of 41 outliers.
 #Annotation
-ann<-read_tsv(paste0(data_dir, "/Annotation_Cohort2.tsv"))
+ann<-read_csv(paste0(data_dir, "Suplementary_Table2.csv"))
 #Select only NASH cohort and baseline samples
 pDat_NASH<- ann %>% filter(str_detect(Cohort, "NASH"))
 pDat_NASH <- pDat_NASH %>% dplyr::filter(Visit_Type=="Baseline")
@@ -44,7 +44,7 @@ pDat_NASH$Fibrosis <- factor(pDat_NASH$Fibrosis, levels = c("F0", "F1", "F2", "F
 # Load counts
 
 ```{r, warning=FALSE, message=FALSE}
-htseq <- read_delim(paste0(data_dir, "/htseq_cohort2.txt"))
+htseq <- read_delim(paste0(data_dir, "counts/htseq_spikes_C2.txt"))
 #remove ambiguous, not unique, no feature
 htseq <- htseq %>% filter(!str_detect(ensembl_gene_id, "^__"))
 #Select only Nash cohort counts
@@ -122,7 +122,7 @@ Top_Spike <- as.data.frame(t(Top_Spike))
 Top_Spike <- Top_Spike %>% rownames_to_column(var="RNAID")
 
 # Load spike counts and merge
-Spikes_C2<- read.csv(paste0(data_dir, "/SpikeRatio_C2.csv"))
+Spikes_C2<- read.csv(paste0(data_dir, "SpikeRatio_C2.csv"))
 
 
 Top_Spike <- left_join(Top_Spike, Spikes_C2)

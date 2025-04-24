@@ -20,7 +20,7 @@ require(RColorBrewer)
 require(pheatmap)
 require(ggbeeswarm)
 require(rstatix)
-library(edgeR)
+#library(edgeR)
 require(ggbeeswarm)
 require(ggpubr)
 require(rstatix)
@@ -60,7 +60,7 @@ data_dir <- "./Data"
 #Load outliers
 outliers_df<-read.table(paste0(data_dir, "/OutliersC2.txt"), header = T) # set of 41 outliers.
 #Annotation
-ann<-read_tsv(paste0(data_dir, "/Annotation_Cohort2.tsv"))
+ann<-read_csv(paste0(data_dir, "/Suplementary_Table2.csv"))
 #Select only NASH cohort and baseline samples
 pDat_NASH<- ann %>% filter(str_detect(Cohort, "NASH"))
 pDat_NASH <- pDat_NASH %>% dplyr::filter(Visit_Type=="Baseline")

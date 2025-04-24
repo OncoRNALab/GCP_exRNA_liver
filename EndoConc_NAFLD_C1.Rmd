@@ -10,6 +10,7 @@ output: html_document
 ```{r, warning=FALSE, message=FALSE}
 library(dplyr)
 library(tidyverse)
+library(biomaRt)
 require(readr)
 library(DT)
 library(ggplot2)
@@ -24,7 +25,7 @@ data_dir <- "./Data/"
 
 ```{r, warning=FALSE, message=FALSE}
 #annotation
-ann_retro<-read_csv(paste0(data_dir,"annotation_Cohort1.csv"))
+ann_retro <-read_csv(paste0(data_dir, "Suplementary_Table1.csv"))
 ann_retro$`QC_Plasma_input_volume_(µl)` <- 200
 
 
@@ -36,7 +37,7 @@ ann_retro$`QC_Plasma_input_volume_(µl)` <- 200
 #getting gene annotation
 ensembl <- useEnsembl("ensembl",dataset="hsapiens_gene_ensembl", version = 109)
 genes_ens <- getBM(attributes=c('ensembl_gene_id','gene_biotype','chromosome_name'),mart=ensembl)
-htseq <- read_delim(paste0(data_dir, "/htseq_cohort1.txt"))
+htseq <- read_delim(paste0(data_dir, "/counts/htseq_cohort1.txt"))
 #Select only Nash cohort counts
 htseq <- htseq  %>%
   column_to_rownames("ensembl_gene_id")

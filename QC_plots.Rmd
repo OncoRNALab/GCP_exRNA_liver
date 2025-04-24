@@ -28,7 +28,7 @@ data_dir <- "./Data"
 
 ```{r, warning=FALSE, message=FALSE}
 #Annotation
-lab_ann <- read_csv(paste0(data_dir, "/Suplementary_Table1.csv"))
+lab_ann <- read_csv(paste0(data_dir, "/Suplementary_Table2.csv"))
 ```
 
 ## Number of reads
@@ -176,7 +176,7 @@ star_plot <- star_df %>%
 star_plot
 star_plot_retro
 
-ggsave(paste0(data_dir, "./Figures/Star.png"), width = 8, height = 6, star_plot, dpi= 500)
+#ggsave(paste0(data_dir, "./Figures/Star.png"), width = 8, height = 6, star_plot, dpi= 500)
 ```
 
 ## Duplication
@@ -214,7 +214,7 @@ dedup_plot <- dedup_df %>%
 dedup_plot_retro
 dedup_plot
 
-ggsave(paste0(data_dir, "./Figures/UmiDedup.png"), width = 8, height = 6, star_plot, dpi= 500)
+#ggsave(paste0(data_dir, "./Figures/UmiDedup.png"), width = 8, height = 6, star_plot, dpi= 500)
 ```
 
 ## gene counts
@@ -251,7 +251,8 @@ summary(as.factor(genes_ens$gene_biotype))
 
 ```{r}
 #loading count files cohort2
-htseq <- read_delim(paste0(data_dir, "/htseq_cohort2.txt"))
+htseq <- read_delim(paste0(data_dir, "/counts/htseq_spikes_C2.txt")) 
+htseq <- htseq %>% filter(!str_detect(ensembl_gene_id, "^__"))
 
 htseq_genes_long <-  htseq %>% 
   gather(., key='RNAID', value="est_counts", -ensembl_gene_id) %>% 
@@ -262,7 +263,7 @@ number_genes_detected <- genes_cutoff %>% group_by(RNAID) %>% dplyr::summarize(g
 number_genes_detected<- left_join(number_genes_detected, Nreads2[,c("RNAID", "Run")])
 
 #loading count files cohort1
-htseq_C1 <- read_delim(paste0(data_dir, "/htseq_cohort1.txt"))
+htseq_C1 <- read_delim(paste0(data_dir, "/counts/htseq_cohort1.txt"))
 htseq_C1_genes_long <-  htseq_C1 %>% 
   gather(., key='RNAID', value="est_counts", -ensembl_gene_id) %>% 
   left_join(., genes_ens, by="ensembl_gene_id")
@@ -311,7 +312,7 @@ Ngenes_plot <- Ngenes_df %>%
 Ngenes_plot
 Ngenes_plot_retro
 
-ggsave(paste0(data_dir, "./Figures/Ngenes.png"), width = 8, height = 6, Ngenes_plot, dpi= 500)
+#ggsave(paste0(data_dir, "./Figures/Ngenes.png"), width = 8, height = 6, Ngenes_plot, dpi= 500)
 
 
 ```
@@ -331,9 +332,6 @@ summary_stats <- Nreads1 %>%
 
 ## Spike ratios
 
-```{r}
-Spikes_C1 %>%dplyr::filter(EndovsERCC!=Inf) %>%  dplyr::group_by(Run) %>% summarise(mean=mean(EndovsERCC, na.rm=T), median=median(EndovsERCC, na.rm=T), max=max(EndovsERCC, na.rm=T), min=min(EndovsERCC, na.rm=T), sd= sd(EndovsERCC, na.rm=T))
-```
 
 ```{r}
 
@@ -406,7 +404,7 @@ EndovsSeq_plot_pro
 ```
 
 ```{r}
-colnames(ann_C1)
+Spikes_C1 %>%dplyr::filter(EndovsERCC!=Inf) %>%  dplyr::group_by(Run) %>% summarise(mean=mean(EndovsERCC, na.rm=T), median=median(EndovsERCC, na.rm=T), max=max(EndovsERCC, na.rm=T), min=min(EndovsERCC, na.rm=T), sd= sd(EndovsERCC, na.rm=T))
 ```
 
 ## QC at gene level
@@ -430,7 +428,10 @@ pDat_C1 <- ann_retro[,c("SMAPLE_RNA","Subject_ID", "NAFLD_Diagnosis_AMC", "NASH_
 #Formating count data
 htseq_C1<-htseq_C1 %>% column_to_rownames(var="ensembl_gene_id")
 htseq_C1 <- htseq_C1 %>% dplyr::select(rownames(pDat_C1))
-htseq_C2<-htseq %>% column_to_rownames(var="ensembl_gene_id")
+
+htseq_C2<-htseq %>% column_to_rownames(var="ensembl_gene_id") %>% dplyr::select(lab_ann$SMAPLE_RNA)
+#ordering coldata as phenodata
+pDat_C2 <- pDat_C2[ colnames(htseq_C2), , drop = FALSE ]
 #creating deseq object
 dds_C1 <- DESeqDataSetFromMatrix(countData=htseq_C1, colData = pDat_C1, design=~1)
 dds_C2 <- DESeqDataSetFromMatrix(countData=htseq_C2, colData = pDat_C2, design=~1)
@@ -443,6 +444,9 @@ dds_C2 <- DESeq(dds_C2)
 vsd_C2 <- vst(dds_C2, blind=FALSE)
 
 vsd_C1$NAFLD_Diagnosis_AMC<-as.factor(vsd_C1$NAFLD_Diagnosis_AMC)
+```
+```{r}
+setdiff(colnames(htseq_C2),rownames(pDat_C2))
 ```
 
 ```{r}
