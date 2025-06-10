@@ -22,7 +22,8 @@ The repository is structured as follows:
 ├── DATA              # supplementary data needed to run total RNA analysis: Diff. Abundance, GSEA 
     ├── Suplementary_Table 1 and 2 # Sample annotation for cohort 1 and 2
     ├── CodeBook_ChemicalData      # description of clinical annotation in supl. files
-    ├── Counts.zip    # Cohort1 and 2 raw count matrices.  
+    ├── Counts.zip    # Cohort1 and 2 raw count matrices.
+    ├── OutliersC1.txt and OutliersC2.txt    # Cohort1 and 2 outlier samples based on QC metrics
 ├── Deconv            # supplementary data needed to run Deconvolution analysis
 ├── Figures           # Output figures from all the analyses 
 
