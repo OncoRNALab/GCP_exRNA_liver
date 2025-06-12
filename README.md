@@ -12,6 +12,8 @@ Raw count tables have been deposited in the [BioStudies Database](http://www.ebi
 
 The total RNA and circRNA preprocessing pipelines can be accessed via GitHub https://github.com/OncoRNALab/ExtractUMI-picoV3-and-RNA-Exome-UMI-pipeline.git  and https://github.com/OncoRNALab/circRNA.git  respectively.</div><br>
 
+A new version of a pipeline to process total exRNA is under preparation and can be found here: [totalexRNA](https://github.com/jasperverwilt/totalexRNA.git)
+
 ### Description
 
 The repository is structured as follows:
