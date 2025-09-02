@@ -2,7 +2,7 @@
 # <center>GCP - Plasma cell‐Free transcriptome profiling in chronic liver disease</center> 
 ---
 
-**<div style="text-align: justify">This repository contains all the scripts and supplementary files required for reproducing the analysis and figures reported in [add paper citation] as part of the Grand Challenge Project: Overcoming the main current diagnostic challenges in hepatology practice.</div><br>**
+**<div style="text-align: justify">This repository contains all the scripts and supplementary files required for reproducing the analysis and figures reported in [add paper citation] as part of the Grand Challenge Project: Overcoming the main current diagnostic challenges in hepatology practice. Given that our cohorts were originally defined using NAFLD/NASH criteria, we continue to use these terms throughout this manuscript. Readers should be aware that these correspond to MASLD and MASH under current nomenclature</div><br>**
 
 <div style="text-align: justify">
 
