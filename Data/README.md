@@ -1,28 +1,37 @@
+# Data Directory Documentation
+
+This folder contains supplementary data files required to reproduce the figures and analyses in the main project. Each file is described below:
+
 ---
-# Files needed to reproduce the figures</H1>
----
 
+## File Descriptions
 
-- **Suplementary_Table1.csv**: cohort 1 sample annotation 
-
-- **Suplementary_Table2.csv**: cohort 2 sample annotation 
-
-- **counts.zip**: cohort 1 and 2 count matrices 
-
-- **CPMFilt300_NashRisk.csv**: CPM count matrix including only NASH subcohort samples
-
+- **Suplementary_Table1.csv**: Sample annotation for cohort 1
+- **Suplementary_Table2.csv**: Sample annotation for cohort 2
+- **counts.zip**: Raw count matrices for cohorts 1 and 2, unzip before running analyses
+- **CPMFilt300_NashRisk.csv**: CPM count matrix for NASH subcohort samples
 - **dedup.csv**: Percentage of reads remaining after UMI deduplication (cohorts 1 and 2)
+- **Ngenes.csv**: Number of protein-coding genes with counts above 10 (cohorts 1 and 2)
+- **OutliersC1.txt**, **OutliersC2.txt**: List of sample IDs classified as outliers based on z-scores of 5 QC metrics
+- **prctStar.csv**: Number and percentage of uniquely mapped reads from STAR alignment
+- **Reads_Number.csv**: Number of reads at each step of the preprocessing workflow
+- **SpikeRatio_C1.csv**, **SpikeRatio_C2.csv**: Endogenous and spike-in counts (cohorts 1 and 2)
+- **Strand.csv**: Percentage of reads aligned to the correct strand
+- **CodeBook_SuplementaryTable1.xlsx**: Contains the description of variables included in Suplementary_Table1.csv (cohort 1 sample annotation)
+- **CodeBook_SuplementaryTable2.xlsx**: Contains the description of variables included in Suplementary_Table2.csv (cohort 2 sample annotation)
 
-- **Ngenes.csv**: Number of protein coding genes with counts above 10 (cohorts 1 and 2)
+---
 
-- **OutliersC1.txt**: and OutliersC2.txt: list of samples IDs classified as outliers based on z-scores of 5 QC metrics
+## Usage Notes
 
-- **prctStar.csv**: Number and percentage of uniquely mapped reads from alignment with Star
+- These files are referenced by analysis scripts in the main repository.
+- Ensure you have the correct file paths when running scripts.
+- For more details on each file, refer to the main project README or script comments.
 
-- **Reads_Number.csv**: number of reads at each step of the preprocessing workflow
+---
 
-- **SpikeRatio_C1**.csv and SpikeRatio_C2.csv: endogenous and spike-in counts (cohorts 1 and 2)
+## Contact
 
-- **Strand.csv**: percentage of reads aligned to the correct strand.
+For questions or issues regarding these data files, please contact the repository maintainer.
 
 

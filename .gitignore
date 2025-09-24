@@ -3,3 +3,10 @@
 .RData
 .Ruserdata
 
+
+# Ignore CleanAnn.Rmd script
+CleanAnn.Rmd
+
+# Ignore fulldataset.xlsx data file
+Data/fulldataset.xlsx
+

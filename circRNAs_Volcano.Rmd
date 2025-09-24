@@ -35,6 +35,8 @@ res_df = res_df %>%
 
 ```{r}
 sig_genes_circ <- as.data.frame(subset(res_df, padj < 0.05 & abs(log2FoldChange) > 2))
+
+write_csv(sig_genes_circ, "./CircRNA/difsig.csv")
 ```
 
 
